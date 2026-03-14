@@ -14,7 +14,6 @@ export default function Projects() {
       github: "https://github.com/ayushsingh1406/grievance-spam-filter.git",
       demo: ""
     },
-
     {
       title: "Career Guidance Chatbot",
       description:
@@ -24,7 +23,6 @@ export default function Projects() {
       github: "https://github.com/ayushsingh1406/career-guidance-chatbot.git",
       demo: ""
     },
-
     {
       title: "Skills & Projects Analyzer",
       description:
@@ -42,7 +40,6 @@ export default function Projects() {
       className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24 text-slate-900 dark:text-slate-100"
     >
       <Reveal>
-        {/* Section Header */}
         <div className="mb-12">
           <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-2">
             Projects
@@ -50,100 +47,38 @@ export default function Projects() {
           <div className="w-16 h-1 bg-blue-600 rounded"></div>
         </div>
 
-
-        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-
           {projects.map((project, index) => (
-
-            <div
-              key={index}
-              className="group bg-white dark:bg-slate-800 dark:border-slate-700 border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
-            >
-
-              {/* Project Image */}
+            <div key={index} className="group bg-white dark:bg-slate-800 dark:border-slate-700 border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
               <div className="relative overflow-hidden">
-
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-52 object-cover group-hover:scale-105 transition duration-500"
-                />
-
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-
+                <img src={project.image} alt={project.title} className="w-full h-52 object-cover group-hover:scale-105 transition duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition" />
               </div>
-
-
-              {/* Project Content */}
               <div className="p-6">
-
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100 mb-2">
-                  {project.title}
-                </h3>
-
-                <p className="text-slate-600 dark:text-slate-300 mb-4 text-sm leading-relaxed">
-                  {project.description}
-                </p>
-
-
-                {/* Tech Stack */}
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100 mb-2">{project.title}</h3>
+                <p className="text-slate-600 dark:text-slate-300 mb-4 text-sm leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-5">
-
                   {project.tech.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="text-xs font-medium bg-blue-50 dark:bg-slate-700 text-blue-700 dark:text-blue-200 px-3 py-1 rounded-full"
-                    >
-                      {tech}
-                    </span>
+                    <span key={i} className="text-xs font-medium bg-blue-50 dark:bg-slate-700 text-blue-700 dark:text-blue-200 px-3 py-1 rounded-full">{tech}</span>
                   ))}
-
                 </div>
-
-
-                {/* Buttons */}
                 <div className="flex gap-3">
-
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-sm rounded-md hover:bg-black transition"
-                  >
-                    <FaGithub />
-                    GitHub
+                  <a href={project.github} target="_blank" className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-sm rounded-md hover:bg-black transition">
+                    <FaGithub /> GitHub
                   </a>
-
                   {project.demo ? (
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      className="flex items-center gap-2 px-4 py-2 border border-slate-300 text-sm rounded-md hover:bg-slate-100 transition"
-                    >
-                      <FaExternalLinkAlt />
-                      Live Demo
+                    <a href={project.demo} target="_blank" className="flex items-center gap-2 px-4 py-2 border border-slate-300 text-sm rounded-md hover:bg-slate-100 transition">
+                      <FaExternalLinkAlt /> Live Demo
                     </a>
                   ) : (
-                    <button
-                      onClick={() =>
-                        toast("🚀 Live demo will be available soon", { duration: 2000 })
-                      }
-                      className="flex items-center gap-2 px-4 py-2 border border-slate-300 text-sm rounded-md hover:bg-slate-100 transition"
-                    >
-                      <FaExternalLinkAlt />
-                      Live Demo
+                    <button onClick={() => toast("🚀 Live demo will be available soon", { duration: 2000 })} className="flex items-center gap-2 px-4 py-2 border border-slate-300 text-sm rounded-md hover:bg-slate-100 transition">
+                      <FaExternalLinkAlt /> Live Demo
                     </button>
                   )}
-
                 </div>
-
               </div>
-
             </div>
-
           ))}
-
         </div>
       </Reveal>
     </section>

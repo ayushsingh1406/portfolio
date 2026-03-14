@@ -27,3 +27,10 @@ html {
   animation: theme-pop 0.8s ease-out forwards;
 }
 
+.text-gradient {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+

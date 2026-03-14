@@ -3,94 +3,32 @@ import Reveal from "./Reveal"
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24 text-slate-900 dark:text-slate-100"
-    >
+    <section id="contact" className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24">
       <Reveal>
-        {/* Section Header */}
-        <div className="mb-12">
-          <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-2">
-            Get In Touch
-          </h2>
-          <div className="w-16 h-1 bg-blue-600 rounded"></div>
+        <div className="mb-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-indigo-600 dark:text-indigo-300">Contact</p>
+          <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Let's build something great.</h2>
         </div>
+        <p className="max-w-3xl text-slate-600 dark:text-slate-300 mb-8">I’m actively looking for opportunities in software engineering, AI product development, and full stack systems. Reach out for collaborative projects, internships, or mentorship conversations.</p>
 
-        <p className="text-slate-600 dark:text-slate-300 text-lg max-w-2xl mb-12">
-          Feel free to reach out if you'd like to collaborate, discuss a project,
-          or explore opportunities together.
-        </p>
-
-
-        {/* Contact Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
-
-          {/* Email */}
-          <a
-            href="mailto:ayushsingh1406p@gmail.com"
-            className="group bg-white dark:bg-slate-800 dark:border-slate-700 border border-slate-200 rounded-xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
-          >
-
-            <div className="w-12 h-12 flex items-center justify-center bg-blue-50 text-blue-600 rounded-lg mb-4 group-hover:scale-110 transition">
-              <FaEnvelope size={20} />
-            </div>
-
-            <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-1">
-              Email
-            </h3>
-
-            <p className="text-slate-600 dark:text-slate-300 text-sm">
-              ayushsingh1406p@gmail.com
-            </p>
-
-          </a>
-
-
-          {/* GitHub */}
-          <a
-            href="https://github.com/ayushsingh1406"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group bg-white dark:bg-slate-800 dark:border-slate-700 border border-slate-200 rounded-xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
-          >
-
-            <div className="w-12 h-12 flex items-center justify-center bg-slate-100 text-slate-800 rounded-lg mb-4 group-hover:scale-110 transition">
-              <FaGithub size={20} />
-            </div>
-
-            <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-1">
-              GitHub
-            </h3>
-
-            <p className="text-slate-600 dark:text-slate-300 text-sm">
-              github.com/ayushsingh1406
-            </p>
-
-          </a>
-
-
-          {/* LinkedIn */}
-          <a
-            href="https://linkedin.com/in/ayushsingh1406"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group bg-white dark:bg-slate-800 dark:border-slate-700 border border-slate-200 rounded-xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
-          >
-
-            <div className="w-12 h-12 flex items-center justify-center bg-blue-50 text-blue-600 rounded-lg mb-4 group-hover:scale-110 transition">
-              <FaLinkedin size={20} />
-            </div>
-
-            <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-1">
-              LinkedIn
-            </h3>
-
-            <p className="text-slate-600 dark:text-slate-300 text-sm">
-              linkedin.com/in/ayushsingh1406
-            </p>
-
-          </a>
-
+        <div className="grid gap-4 md:grid-cols-3">
+          {[
+            ["Email", "ayushsingh1406p@gmail.com", "bg-blue-100 text-blue-700", <FaEnvelope size={20}/>],
+            ["GitHub", "github.com/ayushsingh1406", "bg-slate-100 text-slate-700", <FaGithub size={20}/>],
+            ["LinkedIn", "linkedin.com/in/ayushsingh1406", "bg-blue-100 text-blue-700", <FaLinkedin size={20}/>],
+          ].map(([title, value, colorClass, icon]) => (
+            <a key={title} href={title === "Email" ? "mailto:ayushsingh1406p@gmail.com" : title === "GitHub" ? "https://github.com/ayushsingh1406" : "https://linkedin.com/in/ayushsingh1406"} target="_blank" rel="noreferrer" className="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-5 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center gap-3">
+                <div className={`h-11 w-11 rounded-xl flex items-center justify-center ${colorClass}`}>
+                  {icon}
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-slate-900 dark:text-white">{title}</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-300">{value}</p>
+                </div>
+              </div>
+            </a>
+          ))}
         </div>
       </Reveal>
     </section>

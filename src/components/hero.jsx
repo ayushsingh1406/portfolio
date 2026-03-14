@@ -21,15 +21,11 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
       >
 
-        {/* LEFT CONTENT */}
         <div className="flex-1">
-
-          {/* Name */}
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100 mb-4">
             Hi, I'm Ayush
           </h1>
 
-          {/* Typed role */}
           <h2 className="text-3xl md:text-4xl font-semibold text-blue-600 dark:text-blue-300 mb-6">
             <ReactTyped
               strings={[
@@ -43,15 +39,12 @@ export default function Hero() {
             />
           </h2>
 
-          {/* Description */}
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-xl leading-relaxed">
             Welcome to my portfolio. Explore my projects, technical skills,
             and experience in software development and machine learning.
           </p>
 
-          {/* Buttons */}
           <div className="flex flex-wrap gap-3">
-
             <a
               href="https://github.com/ayushsingh1406"
               target="_blank"
@@ -77,44 +70,22 @@ export default function Hero() {
             >
               Download Resume
             </a>
-
           </div>
-
         </div>
 
-
-        {/* PROFILE IMAGE */}
         <div className="flex-1 flex justify-center">
-
           <motion.div
             className="relative"
             animate={{ y: [0, -10, 0] }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
-
-            {/* Glow ring */}
             <div className="absolute inset-0 rounded-full bg-blue-500 blur-2xl opacity-20"></div>
-
             <div className="w-72 h-72 rounded-full overflow-hidden ring-4 ring-blue-500 shadow-xl relative">
-
-              <img
-                src="/images/ayush.png"
-                alt="Ayush Singh"
-                className="w-full h-full object-cover scale-150"
-              />
-
+              <img src="/images/ayush.png" alt="Ayush Singh" className="w-full h-full object-cover scale-150" />
             </div>
-
           </motion.div>
-
         </div>
-
       </motion.div>
-
     </section>
   )
 }

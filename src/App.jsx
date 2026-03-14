@@ -35,12 +35,12 @@ function App() {
   }
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-50 via-sky-100 to-indigo-100 text-slate-900 dark:from-slate-950 dark:via-indigo-950 dark:to-slate-900 dark:text-slate-100 transition-all duration-500 overflow-x-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-sky-50 via-indigo-100 to-fuchsia-100 text-slate-900 dark:from-slate-950 dark:via-indigo-900 dark:to-slate-900 dark:text-slate-100 transition-all duration-500 overflow-x-hidden">
       <Navbar isDark={isDark} onThemeToggle={toggleTheme} />
 
       {animating && (
         <div className="fixed inset-0 z-[999] overflow-hidden pointer-events-none">
-          <div className="absolute inset-0 bg-slate-900/20 dark:bg-white/20 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-slate-900/18 dark:bg-white/20 backdrop-blur-sm" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="relative flex items-center justify-center">
               <div className={`absolute h-64 w-64 rounded-full ${animationDirection === "light-to-dark" ? "bg-gradient-to-br from-blue-300 via-indigo-400 to-slate-700" : "bg-gradient-to-br from-yellow-300 via-orange-400 to-red-400"} opacity-90 blur-2xl animate-theme-glow`} />
@@ -52,7 +52,7 @@ function App() {
         </div>
       )}
 
-      <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-24">
+      <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 pb-12">
         <Hero />
         <About />
         <Skills />
