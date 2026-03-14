@@ -1,4 +1,5 @@
 import { FaCertificate, FaExternalLinkAlt } from "react-icons/fa"
+import Reveal from "./Reveal"
 
 export default function Certificates() {
 
@@ -30,68 +31,68 @@ export default function Certificates() {
             id="certificates"
             className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24"
         >
-
-            {/* Section Header */}
-            <div className="mb-12">
-                <h2 className="text-4xl font-bold text-slate-900 mb-2">
-                    Certificates
-                </h2>
-                <div className="w-16 h-1 bg-blue-600 rounded"></div>
-            </div>
-
-
-            {/* Certificates Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                {certificates.map((cert, index) => (
-
-                    <a
-                        key={index}
-                        href={cert.file}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
-                    >
-
-                        {/* Icon */}
-                        <div className="flex items-center justify-center w-14 h-14 bg-slate-50 rounded-lg mb-4 group-hover:scale-110 transition">
-                            <img
-                                src={cert.logo}
-                                alt={cert.issuer}
-                                className="w-full h-full object-contain p-2"
-                            />
-                        </div>
-
-                        {/* Title */}
-                        <h3 className="text-lg font-semibold text-slate-900 mb-1">
-                            {cert.title}
-                        </h3>
+            <Reveal>
+                {/* Section Header */}
+                <div className="mb-12">
+                    <h2 className="text-4xl font-bold text-slate-900 mb-2">
+                        Certificates
+                    </h2>
+                    <div className="w-16 h-1 bg-blue-600 rounded"></div>
+                </div>
 
 
-                        {/* Issuer */}
-                        <p className="text-slate-600 text-sm">
-                            {cert.issuer}
-                        </p>
+                {/* Certificates Grid */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                    {certificates.map((cert, index) => (
+
+                        <a
+                            key={index}
+                            href={cert.file}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                        >
+
+                            {/* Icon */}
+                            <div className="flex items-center justify-center w-14 h-14 bg-slate-50 rounded-lg mb-4 group-hover:scale-110 transition">
+                                <img
+                                    src={cert.logo}
+                                    alt={cert.issuer}
+                                    className="w-full h-full object-contain p-2"
+                                />
+                            </div>
+
+                            {/* Title */}
+                            <h3 className="text-lg font-semibold text-slate-900 mb-1">
+                                {cert.title}
+                            </h3>
 
 
-                        {/* Year */}
-                        <p className="text-xs text-slate-500 mt-1 mb-4">
-                            {cert.year}
-                        </p>
+                            {/* Issuer */}
+                            <p className="text-slate-600 text-sm">
+                                {cert.issuer}
+                            </p>
 
 
-                        {/* View indicator */}
-                        <div className="flex items-center gap-2 text-sm text-blue-600 font-medium opacity-0 group-hover:opacity-100 transition">
-                            View Certificate
-                            <FaExternalLinkAlt size={12} />
-                        </div>
+                            {/* Year */}
+                            <p className="text-xs text-slate-500 mt-1 mb-4">
+                                {cert.year}
+                            </p>
 
-                    </a>
 
-                ))}
+                            {/* View indicator */}
+                            <div className="flex items-center gap-2 text-sm text-blue-600 font-medium opacity-0 group-hover:opacity-100 transition">
+                                View Certificate
+                                <FaExternalLinkAlt size={12} />
+                            </div>
 
-            </div>
+                        </a>
 
+                    ))}
+
+                </div>
+            </Reveal>
         </section>
     )
 }
