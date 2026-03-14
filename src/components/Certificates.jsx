@@ -34,7 +34,7 @@ export default function Certificates() {
             <Reveal>
                 {/* Section Header */}
                 <div className="mb-12">
-                    <h2 className="text-4xl font-bold text-slate-900 mb-2">
+                    <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-2">
                         Certificates
                     </h2>
                     <div className="w-16 h-1 bg-blue-600 rounded"></div>
@@ -51,7 +51,7 @@ export default function Certificates() {
                             href={cert.file}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                            className="group bg-white dark:bg-slate-800 dark:border-slate-700 border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
                         >
 
                             {/* Icon */}
@@ -64,13 +64,13 @@ export default function Certificates() {
                             </div>
 
                             {/* Title */}
-                            <h3 className="text-lg font-semibold text-slate-900 mb-1">
+                            <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-1">
                                 {cert.title}
                             </h3>
 
 
                             {/* Issuer */}
-                            <p className="text-slate-600 text-sm">
+                            <p className="text-slate-600 dark:text-slate-300 text-sm">
                                 {cert.issuer}
                             </p>
 

@@ -21,12 +21,12 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24"
+      className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24 text-slate-900 dark:text-slate-100"
     >
       <Reveal>
         {/* Section Header */}
         <div className="mb-12">
-          <h2 className="text-4xl font-bold text-slate-900 mb-2">
+          <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-2">
             Technical Skills
           </h2>
           <div className="w-16 h-1 bg-blue-600 rounded"></div>
@@ -39,7 +39,7 @@ export default function Skills() {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="group bg-white border border-slate-200 rounded-xl p-7 flex flex-col items-center gap-4 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:scale-[1.04] transition-all duration-300"
+              className="group bg-white dark:bg-slate-800 dark:border-slate-700 border border-slate-200 rounded-xl p-7 flex flex-col items-center gap-4 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:scale-[1.04] transition-all duration-300"
             >
 
               {/* Icon */}
@@ -48,7 +48,7 @@ export default function Skills() {
               </div>
 
               {/* Skill Name */}
-              <p className="text-slate-700 font-medium text-sm tracking-wide">
+              <p className="text-slate-700 dark:text-slate-200 font-medium text-sm tracking-wide">
                 {skill.name}
               </p>
 

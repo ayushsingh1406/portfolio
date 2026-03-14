@@ -18,7 +18,7 @@ export default function Projects() {
     {
       title: "Career Guidance Chatbot",
       description:
-        "Intelligent chatbot that recommends career paths and future plans based on user interests and preferences.",
+        "Intelligent chatbot that recommends career paths based on user interests and preferences.",
       tech: ["Flask", "Machine Learning", "Scikit-learn", "Mistral 7B"],
       image: "/images/stock2.png",
       github: "https://github.com/ayushsingh1406/career-guidance-chatbot.git",
@@ -39,12 +39,12 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24"
+      className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24 text-slate-900 dark:text-slate-100"
     >
       <Reveal>
         {/* Section Header */}
         <div className="mb-12">
-          <h2 className="text-4xl font-bold text-slate-900 mb-2">
+          <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-2">
             Projects
           </h2>
           <div className="w-16 h-1 bg-blue-600 rounded"></div>
@@ -58,7 +58,7 @@ export default function Projects() {
 
             <div
               key={index}
-              className="group bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+              className="group bg-white dark:bg-slate-800 dark:border-slate-700 border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
             >
 
               {/* Project Image */}
@@ -79,11 +79,11 @@ export default function Projects() {
               {/* Project Content */}
               <div className="p-6">
 
-                <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100 mb-2">
                   {project.title}
                 </h3>
 
-                <p className="text-slate-600 mb-4 text-sm leading-relaxed">
+                <p className="text-slate-600 dark:text-slate-300 mb-4 text-sm leading-relaxed">
                   {project.description}
                 </p>
 
@@ -94,7 +94,7 @@ export default function Projects() {
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="text-xs font-medium bg-blue-50 text-blue-700 px-3 py-1 rounded-full"
+                      className="text-xs font-medium bg-blue-50 dark:bg-slate-700 text-blue-700 dark:text-blue-200 px-3 py-1 rounded-full"
                     >
                       {tech}
                     </span>

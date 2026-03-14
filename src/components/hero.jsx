@@ -7,15 +7,15 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative max-w-7xl mx-auto px-6 py-32 scroll-mt-24"
+      className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-28 scroll-mt-24 text-slate-900 dark:text-slate-100"
     >
 
       {/* Background glow */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-200 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-200 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute -top-24 -left-24 w-80 h-80 bg-gradient-to-br from-blue-200 to-cyan-300 rounded-full blur-3xl opacity-35"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-indigo-200 via-purple-300 to-fuchsia-400 rounded-full blur-3xl opacity-30"></div>
 
       <motion.div
-        className="relative flex flex-col md:flex-row items-center justify-between gap-16"
+        className="relative bg-white dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-3xl p-8 md:p-10 shadow-xl shadow-slate-300/30 dark:shadow-black/30 backdrop-blur-xl overflow-hidden flex flex-col md:flex-row items-center justify-between gap-10"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -25,12 +25,12 @@ export default function Hero() {
         <div className="flex-1">
 
           {/* Name */}
-          <h1 className="text-5xl font-bold text-slate-900 mb-4">
-            Hi, I'm Ayush K. Singh
+          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100 mb-4">
+            Hi, I'm Ayush
           </h1>
 
           {/* Typed role */}
-          <h2 className="text-3xl md:text-4xl font-semibold text-blue-600 mb-6">
+          <h2 className="text-3xl md:text-4xl font-semibold text-blue-600 dark:text-blue-300 mb-6">
             <ReactTyped
               strings={[
                 "Full Stack Developer",
@@ -44,18 +44,18 @@ export default function Hero() {
           </h2>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-xl leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-xl leading-relaxed">
             Welcome to my portfolio. Explore my projects, technical skills,
             and experience in software development and machine learning.
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-3">
 
             <a
               href="https://github.com/ayushsingh1406"
               target="_blank"
-              className="flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-black hover:scale-105 transition-all duration-200 shadow-md"
+              className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-slate-900 to-slate-700 text-white rounded-full hover:from-slate-800 hover:to-slate-600 hover:-translate-y-0.5 transition-all duration-200 shadow-lg shadow-slate-900/30"
             >
               <FaGithub />
               GitHub
@@ -64,7 +64,7 @@ export default function Hero() {
             <a
               href="https://linkedin.com/in/ayushsingh1406"
               target="_blank"
-              className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md"
+              className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full hover:from-blue-500 hover:to-indigo-500 hover:-translate-y-0.5 transition-all duration-200 shadow-lg shadow-blue-700/25"
             >
               <FaLinkedin />
               LinkedIn
@@ -73,7 +73,7 @@ export default function Hero() {
             <a
               href="/resume/ayush_resume.pdf"
               target="_blank"
-              className="px-6 py-3 border border-slate-300 rounded-lg hover:bg-slate-100 hover:scale-105 transition-all duration-200"
+              className="px-5 py-2.5 border border-slate-300 dark:border-slate-600 rounded-full text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200"
             >
               Download Resume
             </a>

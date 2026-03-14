@@ -2,13 +2,13 @@ import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 mt-24">
+    <footer className="border-t border-slate-200 dark:border-slate-700 mt-24">
 
-      <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6 text-slate-500 dark:text-slate-300">
 
         {/* Left */}
-        <p className="text-slate-500 text-sm">
-          © {new Date().getFullYear()} <span className="font-medium text-slate-700">Ayush K. Singh</span>. All rights reserved.
+        <p className="text-slate-500 dark:text-slate-300 text-sm">
+          © {new Date().getFullYear()} <span className="font-medium text-slate-700 dark:text-slate-100">Ayush K. Singh</span>. All rights reserved.
         </p>
 
         {/* Social Icons */}

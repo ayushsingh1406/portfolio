@@ -4,13 +4,13 @@ export default function About() {
   return (
     <section
       id="about"
-      className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24"
+      className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24 text-slate-900 dark:text-slate-100"
     >
       <Reveal>
 
         {/* Section Title */}
         <div className="mb-12">
-          <h2 className="text-4xl font-bold text-slate-900 mb-2">
+          <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-2">
             About Me
           </h2>
           <div className="w-16 h-1 bg-blue-600 rounded"></div>
@@ -20,17 +20,17 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
 
           {/* LEFT TEXT CONTENT */}
-          <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
+          <div className="space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
 
             <p>
-              I’m a <span className="font-semibold text-slate-800">Computer Science and Engineering student </span>
-              specializing in <span className="font-semibold text-blue-600">Machine Learning</span> with a strong
+              I’m a <span className="font-semibold text-slate-800 dark:text-slate-100">Computer Science and Engineering student </span>
+              specializing in <span className="font-semibold text-blue-600 dark:text-blue-300">Machine Learning</span> with a strong
               interest in building practical software and solving real-world problems through technology.
             </p>
 
             <p>
-              My experience includes programming with <span className="font-medium text-slate-800">C++, Python, and JavaScript</span>,
-              and working with technologies such as <span className="font-medium text-slate-800">React, HTML, CSS, Tailwind CSS, and Django</span>.
+              My experience includes programming with <span className="font-medium text-slate-800 dark:text-slate-100">C++, Python, and JavaScript</span>,
+              and working with technologies such as <span className="font-medium text-blue-600 dark:text-blue-300">React, HTML, CSS, Tailwind CSS, and Django</span>.
               I enjoy learning by building projects, exploring new tools, and strengthening my understanding of
               data structures, algorithms, and modern software development practices.
             </p>
@@ -47,11 +47,11 @@ export default function About() {
           {/* RIGHT INFO CARDS */}
           <div className="grid gap-6">
 
-            <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
-              <h3 className="font-semibold text-slate-900 mb-2">
+            <div className="bg-white dark:bg-slate-800 dark:border-slate-700 border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+              <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">
                 Education
               </h3>
-              <p className="text-slate-600">
+              <p className="text-slate-600 dark:text-slate-300">
                 B.Tech in Computer Science & Engineering
                 <br />
                 Specialization: Machine Learning
@@ -60,21 +60,21 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
-              <h3 className="font-semibold text-slate-900 mb-2">
+            <div className="bg-white dark:bg-slate-800 dark:border-slate-700 border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+              <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">
                 Interests
               </h3>
-              <p className="text-slate-600">
+              <p className="text-slate-600 dark:text-slate-300">
                 Software Development, Machine Learning,
                 Full Stack Development and Problem Solving
               </p>
             </div>
 
-            <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
-              <h3 className="font-semibold text-slate-900 mb-2">
+            <div className="bg-white dark:bg-slate-800 dark:border-slate-700 border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+              <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">
                 Current Focus
               </h3>
-              <p className="text-slate-600">
+              <p className="text-slate-600 dark:text-slate-300">
                 Full-stack development, backend engineering,
                 and building practical real-world applications
               </p>
