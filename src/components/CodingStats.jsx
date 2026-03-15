@@ -23,7 +23,7 @@ export default function CodingStats() {
 
     return (
         <section
-            id="coding"
+            id="stats"
             className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-24 scroll-mt-24 text-slate-900 dark:text-slate-100"
         >
             <Reveal>
