@@ -19,7 +19,12 @@ export default function Navbar({ isDark, onThemeToggle }) {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
         <a href="#home" className="text-base md:text-lg font-bold tracking-tight text-slate-800 dark:text-slate-100 flex items-center gap-2">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-black text-xs font-black text-white">A</span>
-          <span className="leading-none">Ayush <span className="text-gradient bg-gradient-to-r from-cyan-500 via-violet-500 to-fuchsia-400 bg-clip-text text-transparent">Kumar Singh</span></span>
+          <span className="leading-none font-semibold tracking-tight">
+            Ayush{" "}
+            <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              Kumar Singh
+            </span>
+          </span>
         </a>
 
         <div className="hidden md:flex items-center gap-6">
