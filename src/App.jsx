@@ -8,6 +8,7 @@ import Certificates from "./components/Certificates"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import CodingStats from "./components/CodingStats"
+import ScrollProgress from "./components/ScrollProgress"
 
 function App() {
   const [isDark, setIsDark] = useState(() => {
@@ -36,6 +37,7 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-sky-50 via-indigo-100 to-fuchsia-100 text-slate-900 dark:from-slate-950 dark:via-indigo-900 dark:to-slate-900 dark:text-slate-100 transition-all duration-500 overflow-x-hidden">
+      <ScrollProgress />
       <Navbar isDark={isDark} onThemeToggle={toggleTheme} />
 
       {animating && (

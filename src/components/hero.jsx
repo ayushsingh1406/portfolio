@@ -15,14 +15,20 @@ export default function Hero() {
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-indigo-200 via-purple-300 to-fuchsia-400 rounded-full blur-3xl opacity-30"></div>
 
       <motion.div
-        className="relative bg-white dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-3xl p-8 md:p-10 shadow-xl shadow-slate-300/30 dark:shadow-black/30 backdrop-blur-xl overflow-hidden flex flex-col md:flex-row items-center justify-between gap-10"
+        className="relative overflow-hidden rounded-3xl border border-slate-200/40 bg-white/90 p-8 md:p-10 shadow-xl shadow-slate-300/30 dark:border-slate-700/50 dark:bg-slate-900/80 dark:shadow-black/30 backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-10"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
+        <div className="absolute inset-0 opacity-40 dark:opacity-25">
+          <div className="h-full w-full bg-[url('/images/whitebg.jpg')] bg-cover bg-center dark:hidden" />
+          <div className="h-full w-full hidden bg-[url('/images/blackbg.avif')] bg-cover bg-center dark:block" />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-transparent to-slate-100/60 dark:from-slate-950/80 dark:via-slate-900/40 dark:to-slate-900/90" />
+        </div>
+        <div className="relative flex flex-col md:flex-row items-center justify-between gap-10 w-full">
 
-        <div className="flex-1">
-          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100 mb-4">
+        <div className="flex-1 relative z-10">
+          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
             Hi, I'm Ayush
           </h1>
 
@@ -85,6 +91,7 @@ export default function Hero() {
             </div>
           </motion.div>
         </div>
+      </div>
       </motion.div>
     </section>
   )

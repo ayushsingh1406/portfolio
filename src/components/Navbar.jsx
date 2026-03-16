@@ -15,45 +15,45 @@ export default function Navbar({ isDark, onThemeToggle }) {
   ]
 
   return (
-    <nav className="fixed top-3 left-1/2 z-50 w-[calc(100%-1.5rem)] md:w-[calc(100%-4rem)] -translate-x-1/2 rounded-2xl border border-white/40 dark:border-slate-600/40 bg-white/80 dark:bg-slate-900/75 backdrop-blur-xl shadow-xl shadow-slate-900/10 dark:shadow-black/30">
+    <nav className="fixed top-3 left-1/2 z-50 w-[calc(100%-1.5rem)] md:w-[calc(100%-4rem)] -translate-x-1/2 rounded-3xl border border-white/25 bg-gradient-to-r from-white/80 via-indigo-50/70 to-violet-100/60 dark:from-slate-900/85 dark:via-indigo-900/65 dark:to-slate-900/90 backdrop-blur-xl shadow-[0_8px_30px_rgba(15,23,42,0.25)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.45)]">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
-        <a href="#home" className="text-lg md:text-2xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">
-          Ayush <span className="text-gradient bg-gradient-to-r from-blue-500 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent">Kumar Singh</span>
+        <a href="#home" className="text-base md:text-lg font-bold tracking-tight text-slate-800 dark:text-slate-100 flex items-center gap-2">
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-black text-xs font-black text-white">A</span>
+          <span className="leading-none">Ayush <span className="text-gradient bg-gradient-to-r from-cyan-500 via-violet-500 to-fuchsia-400 bg-clip-text text-transparent">Kumar Singh</span></span>
         </a>
 
-        <div className="hidden md:flex items-center gap-5">
-          <ul className="flex items-center gap-5 text-slate-600 dark:text-slate-200 font-medium">
+        <div className="hidden md:flex items-center gap-6">
+          <ul className="flex items-center gap-4 text-sm font-medium text-slate-700 dark:text-slate-200">
             {navLinks.map((link, index) => (
-              <li key={index} className="relative group">
+              <li key={index} className="group relative">
                 <a
                   href={link.href}
-                  className="transition-colors duration-200 hover:text-blue-600 dark:hover:text-blue-300"
+                  className="rounded-full px-3 py-1.5 transition text-slate-600 hover:text-indigo-600 dark:text-slate-200 dark:hover:text-indigo-300"
                 >
                   {link.name}
                 </a>
-                <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-1/2 h-0.5 w-0 rounded-full bg-gradient-to-r from-indigo-500 to-fuchsia-500 transition-all duration-300 group-hover:w-7 group-hover:-translate-x-1/2" />
               </li>
             ))}
           </ul>
-          <button
-            onClick={onThemeToggle}
-            className="relative h-8 w-14 rounded-full border border-slate-300 dark:border-slate-600 bg-slate-100 dark:bg-slate-700 p-[2px] flex items-center transition-all duration-300"
-            aria-label="Toggle dark mode"
-          >
-            <span className={`h-7 w-7 rounded-full bg-white dark:bg-slate-900 shadow-sm transition-all duration-300 ${isDark ? "translate-x-6" : "translate-x-0"}`}>
-              <span className="flex items-center justify-center h-full w-full text-yellow-500 dark:text-yellow-300 text-[11px]">
-                {isDark ? <FaMoon /> : <FaSun />}
+          <div className="relative group">
+            <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-fuchsia-500 opacity-0 transition group-hover:opacity-30" />
+            <button
+              onClick={onThemeToggle}
+              className="relative z-10 flex h-8 w-14 items-center rounded-full border border-slate-300 dark:border-slate-600 bg-slate-100 dark:bg-slate-700 p-1"
+              aria-label="Toggle dark mode"
+            >
+              <span className={`h-6 w-6 rounded-full bg-white dark:bg-slate-900 shadow transition-all ${isDark ? "translate-x-6" : "translate-x-0"}`}>
+                <span className="flex h-full w-full items-center justify-center text-[10px] text-yellow-500 dark:text-yellow-300">{isDark ? <FaMoon /> : <FaSun />}</span>
               </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
-          <button onClick={onThemeToggle} className="relative h-7 w-12 rounded-full border border-slate-300 dark:border-slate-600 bg-slate-100 dark:bg-slate-700 p-[2px] flex items-center transition-all duration-300">
-            <span className={`h-6 w-6 rounded-full bg-white dark:bg-slate-900 shadow-sm transition-all duration-300 ${isDark ? "translate-x-5" : "translate-x-0"}`}>
-              <span className="flex items-center justify-center h-full w-full text-yellow-500 dark:text-yellow-300 text-[10px]">
-                {isDark ? <FaMoon /> : <FaSun />}
-              </span>
+          <button onClick={onThemeToggle} className="relative h-8 w-14 rounded-full border border-slate-300 dark:border-slate-600 bg-slate-100 dark:bg-slate-700 p-[2px]">
+            <span className={`h-7 w-7 rounded-full bg-white dark:bg-slate-900 shadow-sm transition-all ${isDark ? "translate-x-6" : "translate-x-0"}`}>
+              <span className="flex h-full w-full items-center justify-center text-[10px] text-yellow-500 dark:text-yellow-300">{isDark ? <FaMoon /> : <FaSun />}</span>
             </span>
           </button>
           <button className="text-xl text-slate-700 dark:text-slate-200" onClick={() => setMenuOpen(!menuOpen)}>
@@ -62,11 +62,11 @@ export default function Navbar({ isDark, onThemeToggle }) {
         </div>
       </div>
 
-      <div className={`md:hidden transition-all duration-300 overflow-hidden ${menuOpen ? "max-h-96" : "max-h-0"}`}>
-        <ul className="flex flex-col items-center gap-3 py-3 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700">
+      <div className={`md:hidden transition-all duration-300 overflow-hidden ${menuOpen ? "max-h-72" : "max-h-0"}`}>
+        <ul className="flex flex-col items-center gap-3 py-3 bg-white/95 dark:bg-slate-900/90 border-t border-slate-200 dark:border-slate-700 backdrop-blur">
           {navLinks.map((link, index) => (
             <li key={index}>
-              <a href={link.href} onClick={() => setMenuOpen(false)} className="text-slate-700 dark:text-slate-200 font-medium hover:text-blue-600 dark:hover:text-blue-300 transition">
+              <a href={link.href} onClick={() => setMenuOpen(false)} className="text-slate-700 dark:text-slate-200 font-medium hover:text-indigo-600 dark:hover:text-indigo-300 transition">
                 {link.name}
               </a>
             </li>
