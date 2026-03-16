@@ -3,7 +3,6 @@ import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { ReactTyped } from "react-typed"
 
 export default function Hero() {
-
   return (
     <section
       id="home"
@@ -20,78 +19,97 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
+
+        {/* Background images */}
         <div className="absolute inset-0 opacity-40 dark:opacity-25">
           <div className="h-full w-full bg-[url('/images/whitebg.jpg')] bg-cover bg-center dark:hidden" />
           <div className="h-full w-full hidden bg-[url('/images/blackbg.avif')] bg-cover bg-center dark:block" />
           <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-transparent to-slate-100/60 dark:from-slate-950/80 dark:via-slate-900/40 dark:to-slate-900/90" />
         </div>
+
         <div className="relative flex flex-col md:flex-row items-center justify-between gap-10 w-full">
 
-        <div className="flex-1 relative z-10">
-          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
-            Hi, I'm Ayush
-          </h1>
+          {/* TEXT SECTION */}
+          <div className="flex-1 relative z-10 order-2 md:order-1 mt-6 md:mt-0">
 
-          <h2 className="text-3xl md:text-4xl font-semibold text-blue-600 dark:text-blue-300 mb-6">
-            <ReactTyped
-              strings={[
-                "Full Stack Developer",
-                "Machine Learning Enthusiast"
-              ]}
-              typeSpeed={60}
-              backSpeed={40}
-              loop
-              showCursor={false}
-            />
-          </h2>
+            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
+              Hi, I'm Ayush
+            </h1>
 
-          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-xl leading-relaxed">
-            Welcome to my portfolio. Explore my projects, technical skills,
-            and experience in software development and machine learning.
-          </p>
+            <h2 className="text-3xl md:text-4xl font-semibold text-blue-600 dark:text-blue-300 mb-6">
+              <ReactTyped
+                strings={[
+                  "Full Stack Developer",
+                  "Machine Learning Enthusiast"
+                ]}
+                typeSpeed={60}
+                backSpeed={40}
+                loop
+                showCursor={false}
+              />
+            </h2>
 
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="https://github.com/ayushsingh1406"
-              target="_blank"
-              className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-slate-900 to-slate-700 text-white rounded-full hover:from-slate-800 hover:to-slate-600 hover:-translate-y-0.5 transition-all duration-200 shadow-lg shadow-slate-900/30"
-            >
-              <FaGithub />
-              GitHub
-            </a>
+            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-xl leading-relaxed">
+              Welcome to my portfolio. Explore my projects, technical skills,
+              and experience in software development and machine learning.
+            </p>
 
-            <a
-              href="https://linkedin.com/in/ayushsingh1406"
-              target="_blank"
-              className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full hover:from-blue-500 hover:to-indigo-500 hover:-translate-y-0.5 transition-all duration-200 shadow-lg shadow-blue-700/25"
-            >
-              <FaLinkedin />
-              LinkedIn
-            </a>
+            {/* LINKS */}
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://github.com/ayushsingh1406"
+                target="_blank"
+                className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-slate-900 to-slate-700 text-white rounded-full hover:from-slate-800 hover:to-slate-600 hover:-translate-y-0.5 transition-all duration-200 shadow-lg shadow-slate-900/30"
+              >
+                <FaGithub />
+                GitHub
+              </a>
 
-            <a
-              href="/resume/ayush_resume.pdf"
-              target="_blank"
-              className="px-5 py-2.5 border border-slate-300 dark:border-slate-600 rounded-full text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200"
-            >
-              Download Resume
-            </a>
-          </div>
-        </div>
+              <a
+                href="https://linkedin.com/in/ayushsingh1406"
+                target="_blank"
+                className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full hover:from-blue-500 hover:to-indigo-500 hover:-translate-y-0.5 transition-all duration-200 shadow-lg shadow-blue-700/25"
+              >
+                <FaLinkedin />
+                LinkedIn
+              </a>
 
-        <div className="flex-1 flex justify-center">
-          <motion.div
-            className="relative"
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <div className="absolute inset-0 rounded-full bg-blue-500 blur-2xl opacity-20"></div>
-            <div className="w-72 h-72 rounded-full overflow-hidden ring-4 ring-blue-500 shadow-xl relative">
-              <img src="/images/ayush.png" alt="Ayush Singh" className="w-full h-full object-cover scale-150" />
+              <a
+                href="/resume/ayush_resume.pdf"
+                target="_blank"
+                className="px-5 py-2.5 border border-slate-300 dark:border-slate-600 rounded-full text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200"
+              >
+                Download Resume
+              </a>
             </div>
-          </motion.div>
+
+          </div>
+
+          {/* IMAGE SECTION */}
+          <div className="flex-1 flex justify-center order-1 md:order-2">
+
+            <motion.div
+              className="relative"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <div className="absolute inset-0 rounded-full bg-blue-500 blur-2xl opacity-20"></div>
+
+              {/* Smaller image on mobile */}
+              <div className="w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden ring-4 ring-blue-900 shadow-xl relative">
+                <img
+                  src="/images/ayush.png"
+                  alt="Ayush Singh"
+                  className="w-full h-full object-cover scale-[1.50] md:scale-150"
+                />
+              </div>
+
+            </motion.div>
+
+          </div>
+
         </div>
-      </div>
+
       </motion.div>
     </section>
   )
