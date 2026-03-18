@@ -37,8 +37,8 @@ export default function Hero() {
             <h2 className="text-3xl md:text-4xl font-semibold text-blue-600 dark:text-blue-300 mb-6">
               <ReactTyped
                 strings={[
-                  "Full Stack Developer",
-                  "Machine Learning Enthusiast",
+                  "Software Engineer | Full Stack Developer",
+                  "AI & Machine Learning Practitioner",
                 ]}
                 typeSpeed={60}
                 backSpeed={40}
@@ -48,8 +48,7 @@ export default function Hero() {
             </h2>
 
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-xl">
-              Welcome to my portfolio. Explore my projects, skills,
-              and experience in software development and ML.
+              Building impactful digital solutions with expertise in web development, AI, and scalable systems. Explore my work, skills, and journey below.
             </p>
 
             {/* BUTTONS (FIXED) */}

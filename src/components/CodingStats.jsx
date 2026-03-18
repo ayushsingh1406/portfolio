@@ -104,16 +104,10 @@ export default function CodingStats() {
 
                 <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
 
-                    <div>
-
-                        <h2 className="text-3xl sm:text-4xl font-bold mb-2">
-                            Coding Activity
-                        </h2>
-
-                        <div className="w-20 h-1 bg-blue-600 rounded"></div>
-
+                    <div className="mb-8">
+                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-indigo-600 dark:text-indigo-300">Coding Stats</p>
+                        <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">My Coding Journey & Insights</h2>
                     </div>
-
                     <p className="text-sm text-slate-600 dark:text-slate-300 max-w-xl">
                         My development activity across GitHub repositories and competitive programming platforms.
                     </p>

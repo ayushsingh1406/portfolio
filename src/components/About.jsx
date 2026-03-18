@@ -10,11 +10,9 @@ export default function About() {
       <Reveal>
 
         {/* Section Title */}
-        <div className="mb-12">
-          <h2 className="text-4xl font-bold mb-2">
-            About Me
-          </h2>
-          <div className="w-16 h-1 bg-blue-600 rounded"></div>
+        <div className="mb-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-indigo-600 dark:text-indigo-300">About Me</p>
+          <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Who am I ?</h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">

@@ -29,9 +29,9 @@ export default function Certificates() {
     return (
         <section id="certificates" className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24">
             <Reveal>
-                <div className="mb-10">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-2">Certifications</h2>
-                    <div className="w-16 h-1 bg-blue-600 rounded"></div>
+                <div className="mb-8">
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-indigo-600 dark:text-indigo-300">Certifications</p>
+                    <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Professional Credentials & Achievements</h2>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

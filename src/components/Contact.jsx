@@ -7,7 +7,7 @@ export default function Contact() {
       <Reveal>
         <div className="mb-8">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-indigo-600 dark:text-indigo-300">Contact</p>
-          <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Let's build something great.</h2>
+          <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Connect for Collaboration & Opportunities</h2>
         </div>
         <p className="max-w-3xl text-slate-600 dark:text-slate-300 mb-8">I’m actively looking for opportunities in software engineering, AI product development, and full stack systems. Reach out for collaborative projects, internships, or mentorship conversations.</p>
 

@@ -88,9 +88,9 @@ export default function Timeline() {
 	return (
 		<section id="timeline" className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24 text-slate-900 dark:text-slate-100">
 			<Reveal>
-				<div className="mb-12">
-					<h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-2">My Journey</h2>
-					<div className="w-16 h-1 bg-blue-600 rounded"></div>
+				<div className="mb-8">
+					<p className="text-xs font-semibold uppercase tracking-[0.24em] text-indigo-600 dark:text-indigo-300">Timeline</p>
+					<h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Milestones & Growth Over Time</h2>
 				</div>
 
 				<div className="relative border-l-4 border-gradient-to-b from-blue-400 via-fuchsia-400 to-yellow-300 dark:from-blue-700 dark:via-fuchsia-700 dark:to-yellow-500 pl-8">
