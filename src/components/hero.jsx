@@ -1,4 +1,5 @@
-import { motion } from "framer-motion"
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { ReactTyped } from "react-typed"
 
@@ -8,7 +9,6 @@ export default function Hero() {
       id="home"
       className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-28 scroll-mt-24 text-slate-900 dark:text-slate-100"
     >
-
       {/* Background glow */}
       <div className="absolute -top-24 -left-24 w-80 h-80 bg-gradient-to-br from-blue-200 to-cyan-300 rounded-full blur-3xl opacity-35"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-indigo-200 via-purple-300 to-fuchsia-400 rounded-full blur-3xl opacity-30"></div>
@@ -19,8 +19,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-
-        {/* Background images */}
+        {/* Background */}
         <div className="absolute inset-0 opacity-40 dark:opacity-25">
           <div className="h-full w-full bg-[url('/images/whitebg.jpg')] bg-cover bg-center dark:hidden" />
           <div className="h-full w-full hidden bg-[url('/images/blackbg.avif')] bg-cover bg-center dark:block" />
@@ -28,11 +27,10 @@ export default function Hero() {
         </div>
 
         <div className="relative flex flex-col md:flex-row items-center justify-between gap-10 w-full">
-
-          {/* TEXT SECTION */}
+          
+          {/* TEXT */}
           <div className="flex-1 relative z-10 order-2 md:order-1 mt-6 md:mt-0">
-
-            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
               Hi, I'm Ayush
             </h1>
 
@@ -40,7 +38,7 @@ export default function Hero() {
               <ReactTyped
                 strings={[
                   "Full Stack Developer",
-                  "Machine Learning Enthusiast"
+                  "Machine Learning Enthusiast",
                 ]}
                 typeSpeed={60}
                 backSpeed={40}
@@ -49,68 +47,96 @@ export default function Hero() {
               />
             </h2>
 
-            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-xl leading-relaxed">
-              Welcome to my portfolio. Explore my projects, technical skills,
-              and experience in software development and machine learning.
+            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-xl">
+              Welcome to my portfolio. Explore my projects, skills,
+              and experience in software development and ML.
             </p>
 
-            {/* LINKS */}
+            {/* BUTTONS (FIXED) */}
             <div className="flex flex-wrap gap-3">
               <a
                 href="https://github.com/ayushsingh1406"
                 target="_blank"
-                className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-slate-900 to-slate-700 text-white rounded-full hover:from-slate-800 hover:to-slate-600 hover:-translate-y-0.5 transition-all duration-200 shadow-lg shadow-slate-900/30"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-2.5 bg-slate-900 dark:bg-slate-700 text-white rounded-full hover:-translate-y-0.5 transition"
               >
-                <FaGithub />
-                GitHub
+                <FaGithub /> GitHub
               </a>
 
               <a
                 href="https://linkedin.com/in/ayushsingh1406"
                 target="_blank"
-                className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full hover:from-blue-500 hover:to-indigo-500 hover:-translate-y-0.5 transition-all duration-200 shadow-lg shadow-blue-700/25"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-full hover:-translate-y-0.5 transition"
               >
-                <FaLinkedin />
-                LinkedIn
+                <FaLinkedin /> LinkedIn
               </a>
 
               <a
                 href="/resume/ayush_resume.pdf"
                 target="_blank"
-                className="px-5 py-2.5 border border-slate-300 dark:border-slate-600 rounded-full text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200"
+                rel="noopener noreferrer"
+                className="px-5 py-2.5 border border-slate-300 dark:border-slate-600 rounded-full text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
               >
                 Download Resume
               </a>
             </div>
-
           </div>
 
-          {/* IMAGE SECTION */}
+          {/* IMAGE */}
           <div className="flex-1 flex justify-center order-1 md:order-2">
-
-            <motion.div
-              className="relative"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <div className="absolute inset-0 rounded-full bg-blue-500 blur-2xl opacity-20"></div>
-
-              {/* Smaller image on mobile */}
-              <div className="w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden ring-4 ring-blue-900 shadow-xl relative">
-                <img
-                  src="/images/ayush.png"
-                  alt="Ayush Singh"
-                  className="w-full h-full object-cover scale-[1.50] md:scale-150"
-                />
-              </div>
-
-            </motion.div>
-
+            <ImageSwitcher />
           </div>
-
         </div>
-
       </motion.div>
     </section>
+  )
+}
+
+/* IMAGE SWITCHER */
+
+function ImageSwitcher() {
+  const [index, setIndex] = useState(0)
+
+  const images = [
+    { src: "/images/ayush.png", position: "center 30%" },
+    { src: "/images/ayush2.png", position: "center 15%" },
+  ]
+
+  const nextImage = () => {
+    setIndex((prev) => (prev + 1) % images.length)
+  }
+
+  return (
+    <motion.div
+      onClick={nextImage}
+      whileHover={{ scale: 1.03 }}
+      className="relative cursor-pointer"
+    >
+      {/* STACK CARD 1 (theme aware) */}
+      <div className="absolute w-56 h-72 md:w-64 md:h-80 bg-blue-100 dark:bg-slate-700 rounded-2xl rotate-6 top-4 left-4 z-0"></div>
+
+      {/* STACK CARD 2 */}
+      <div className="absolute w-56 h-72 md:w-64 md:h-80 bg-white dark:bg-slate-800 rounded-2xl -rotate-6 top-2 left-2 z-0 shadow-lg"></div>
+
+      {/* MAIN IMAGE */}
+      <div className="relative w-56 h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl z-10 bg-white dark:bg-slate-900">
+        
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={images[index].src}
+            src={images[index].src}
+            alt="Ayush Singh"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: images[index].position }}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.98 }}
+            transition={{ duration: 0.5 }}
+          />
+        </AnimatePresence>
+
+      </div>
+    </motion.div>
   )
 }

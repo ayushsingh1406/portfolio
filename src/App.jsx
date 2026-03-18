@@ -9,6 +9,7 @@ import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import CodingStats from "./components/CodingStats"
 import ScrollProgress from "./components/ScrollProgress"
+import Timeline from "./components/timeline"
 
 function App() {
   const [isDark, setIsDark] = useState(() => {
@@ -57,6 +58,7 @@ function App() {
       <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 pb-12">
         <Hero />
         <About />
+        <Timeline/>
         <Skills />
         <Projects />
         <CodingStats />
