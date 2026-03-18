@@ -59,7 +59,7 @@ const timelineData = [
 		title: "Summer Training – DSA with C++",
 		date: "June 2025 - July 2025",
 		description:
-			"Completed intensive DSA training with C++ at SPlen Technologies, strengthening algorithmic thinking and coding efficiency.",
+			"Completed intensive DSA training with C++ at Splen Technologies, strengthening algorithmic thinking and coding efficiency.",
 	},
 	{
 		icon: <FaBrain className="text-teal-500 dark:text-teal-300" size={24} />,

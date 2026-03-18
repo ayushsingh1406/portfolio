@@ -27,7 +27,7 @@ export default function Hero() {
         </div>
 
         <div className="relative flex flex-col md:flex-row items-center justify-between gap-10 w-full">
-          
+
           {/* TEXT */}
           <div className="flex-1 relative z-10 order-2 md:order-1 mt-6 md:mt-0">
             <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
@@ -37,8 +37,8 @@ export default function Hero() {
             <h2 className="text-3xl md:text-4xl font-semibold text-blue-600 dark:text-blue-300 mb-6">
               <ReactTyped
                 strings={[
-                  "Software Engineer | Full Stack Developer",
-                  "AI & Machine Learning Practitioner",
+                  "Full Stack Developer",
+                  "Machine Learning Enthusiast"
                 ]}
                 typeSpeed={60}
                 backSpeed={40}
@@ -120,7 +120,7 @@ function ImageSwitcher() {
 
       {/* MAIN IMAGE */}
       <div className="relative w-56 h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl z-10 bg-white dark:bg-slate-900">
-        
+
         <AnimatePresence mode="wait">
           <motion.img
             key={images[index].src}

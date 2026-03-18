@@ -12,7 +12,7 @@ export default function Projects() {
       tech: ["Python", "Machine Learning", "TF-IDF"],
       image: "/images/stock1.jpg",
       github: "https://github.com/ayushsingh1406/grievance-spam-filter.git",
-      demo: ""
+      demo: "https://grievance-spam-filter.streamlit.app/"
     },
     {
       title: "Career Guidance Chatbot",
