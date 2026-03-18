@@ -9,7 +9,7 @@ export default function Navbar({ isDark, onThemeToggle }) {
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
-    { name: "Timeline", href: "#timeline" },
+    { name: "Journey", href: "#timeline" },
     { name: "Stats", href: "#stats" },
     { name: "Certificates", href: "#certificates" },
     { name: "Contact", href: "#contact" }
