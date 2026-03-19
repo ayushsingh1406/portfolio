@@ -101,13 +101,13 @@ export default function Skills() {
 
         <section
             id="skills"
-            className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24 text-slate-900 dark:text-slate-100"
+            className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24 text-slate-900 dark:text-white"
         >
 
             <Reveal>
 
                 <div className="mb-8">
-                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-indigo-600 dark:text-indigo-300">Skills</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-blue-600 dark:text-cyan-400">Skills</p>
                     <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Technologies & Tools I Use</h2>
                 </div>
 
@@ -120,20 +120,19 @@ export default function Skills() {
                             className="
 relative
 overflow-hidden
-rounded-2xl
-p-6
-border border-slate-200/70 dark:border-slate-700/70
-bg-gradient-to-br
-from-white via-slate-50 to-slate-100
-dark:from-slate-900 dark:via-slate-900 dark:to-slate-800
-shadow-lg shadow-slate-200/60 dark:shadow-black/40
-transition duration-300 hover:shadow-2xl
+rounded-[2rem]
+p-8
+border border-white/40 dark:border-white/10
+bg-white/60 dark:bg-slate-900/50
+backdrop-blur-xl
+shadow-xl shadow-indigo-500/5 dark:shadow-black/40
+transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-cyan-500/10 hover:-translate-y-1
 "
                         >
 
-                            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.12),transparent_60%)]"></div>
+                            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.12),transparent_60%)] dark:bg-[radial-gradient(circle_at_top_right,rgba(6,182,212,0.12),transparent_60%)]"></div>
 
-                            <h3 className="text-lg font-semibold mb-6 text-slate-800 dark:text-slate-200">
+                            <h3 className="text-xl font-bold mb-6 text-slate-900 dark:text-white">
                                 {group.title}
                             </h3>
 
@@ -148,27 +147,28 @@ transition duration-300 hover:shadow-2xl
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="
-flex items-center gap-3
+flex items-center gap-4
 p-3
-rounded-lg
-bg-slate-100 dark:bg-slate-800
-hover:bg-slate-200 dark:hover:bg-slate-700
-transition
+rounded-xl
+bg-slate-100/50 dark:bg-slate-800/50
+hover:bg-white dark:hover:bg-slate-700
+transition-all duration-300
 cursor-pointer
+group
 "
                                     >
 
                                         <div className="
-flex items-center justify-center
 w-10 h-10
-rounded-md
+rounded-lg
 bg-white dark:bg-slate-900
 shadow-sm
+group-hover:scale-110 transition-transform duration-300
 ">
                                             {skill.icon}
                                         </div>
 
-                                        <p className="text-sm font-medium">
+                                        <p className="text-sm font-semibold text-slate-700 dark:text-slate-300 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
                                             {skill.name}
                                         </p>
 

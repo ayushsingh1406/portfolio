@@ -37,35 +37,45 @@ function App() {
   }
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-sky-50 via-indigo-100 to-fuchsia-100 text-slate-900 dark:from-slate-950 dark:via-indigo-900 dark:to-slate-900 dark:text-slate-100 transition-all duration-500 overflow-x-hidden">
-      <ScrollProgress />
-      <Navbar isDark={isDark} onThemeToggle={toggleTheme} />
+    <div className={`relative min-h-screen transition-all duration-500 overflow-x-hidden ${isDark ? 'bg-slate-950 text-slate-200' : 'bg-slate-50 text-slate-800'}`}>
+      
+      {/* Animated Background Orbs */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none z-0 transition-opacity duration-700">
+        <div className={`absolute -top-[10%] -left-[10%] w-[40%] h-[40%] rounded-full mix-blend-multiply filter blur-[100px] opacity-50 animate-blob ${isDark ? 'bg-indigo-600/40' : 'bg-blue-300'}`}></div>
+        <div className={`absolute top-[20%] -right-[10%] w-[40%] h-[40%] rounded-full mix-blend-multiply filter blur-[100px] opacity-50 animate-blob animation-delay-2000 ${isDark ? 'bg-fuchsia-600/40' : 'bg-purple-300'}`}></div>
+        <div className={`absolute -bottom-[10%] left-[20%] w-[40%] h-[40%] rounded-full mix-blend-multiply filter blur-[100px] opacity-50 animate-blob animation-delay-4000 ${isDark ? 'bg-cyan-600/40' : 'bg-pink-300'}`}></div>
+      </div>
 
-      {animating && (
-        <div className="fixed inset-0 z-[999] overflow-hidden pointer-events-none">
-          <div className="absolute inset-0 bg-slate-900/18 dark:bg-white/20 backdrop-blur-sm" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="relative flex items-center justify-center">
-              <div className={`absolute h-64 w-64 rounded-full ${animationDirection === "light-to-dark" ? "bg-gradient-to-br from-blue-300 via-indigo-400 to-slate-700" : "bg-gradient-to-br from-yellow-300 via-orange-400 to-red-400"} opacity-90 blur-2xl animate-theme-glow`} />
-              <div className="relative h-28 w-28 flex items-center justify-center text-5xl animate-pop">
-                {animationDirection === "light-to-dark" ? "🌙" : "☀"}
+      <div className="relative z-10 w-full h-full">
+        <ScrollProgress />
+        <Navbar isDark={isDark} onThemeToggle={toggleTheme} />
+
+        {animating && (
+          <div className="fixed inset-0 z-[999] overflow-hidden pointer-events-none transition-all">
+            <div className="absolute inset-0 bg-slate-900/10 dark:bg-white/5 backdrop-blur-md" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="relative flex items-center justify-center">
+                <div className={`absolute h-64 w-64 rounded-full ${animationDirection === "light-to-dark" ? "bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-cyan-500" : "bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400"} opacity-70 blur-3xl animate-theme-glow`} />
+                <div className="relative h-28 w-28 flex items-center justify-center text-6xl animate-pop drop-shadow-2xl">
+                  {animationDirection === "light-to-dark" ? "🌙" : "☀"}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 pb-12">
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Timeline/>
-        <CodingStats />
-        <Certificates />
-        <Contact />
-      </main>
-      <Footer />
+        <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Timeline/>
+          <CodingStats />
+          <Certificates />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </div>
   )
 }

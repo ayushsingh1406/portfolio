@@ -95,7 +95,7 @@ export default function CodingStats() {
 
         <section
             id="stats"
-            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-24 scroll-mt-24 text-slate-900 dark:text-slate-100"
+            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-24 scroll-mt-24 text-slate-900 dark:text-white"
         >
 
             <Reveal>
@@ -105,10 +105,10 @@ export default function CodingStats() {
                 <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
 
                     <div className="mb-8">
-                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-indigo-600 dark:text-indigo-300">Coding Stats</p>
+                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-blue-600 dark:text-cyan-400">Coding Stats</p>
                         <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">My Coding Journey & Insights</h2>
                     </div>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 max-w-xl">
+                    <p className="text-sm text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
                         My development activity across GitHub repositories and competitive programming platforms.
                     </p>
 
@@ -126,17 +126,17 @@ export default function CodingStats() {
                         relative overflow-hidden
                         p-6
                         rounded-2xl
-                        border border-slate-200/70 dark:border-slate-700/70
+                        border border-truffle-200/70 dark:border-truffleDark-800/70
                         bg-gradient-to-br
-                        from-white via-slate-50 to-slate-100
-                        dark:from-slate-900 dark:via-slate-900 dark:to-slate-800
-                        shadow-xl shadow-slate-300/40 dark:shadow-black/40
+                        from-truffle-50 via-truffle-50 to-truffle-100
+                        dark:from-truffleDark-950 dark:via-truffleDark-950 dark:to-truffleDark-900
+                        shadow-xl shadow-truffle-200/40 dark:shadow-black/40
                         transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl
                     ">
 
                         {/* glow */}
 
-                        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.12),transparent_60%)]"></div>
+                        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.12),transparent_60%)] dark:bg-[radial-gradient(circle_at_top_right,rgba(6,182,212,0.12),transparent_60%)]"></div>
 
 
                         {/* Header */}
@@ -145,17 +145,17 @@ export default function CodingStats() {
 
                             <div>
 
-                                <p className="text-sm text-slate-500 dark:text-slate-400">
+                                <p className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-1">
                                     GitHub
                                 </p>
 
-                                <h3 className="text-xl font-semibold">
+                                <h3 className="text-2xl font-bold">
                                     Contribution Activity
                                 </h3>
 
                             </div>
 
-                            <span className="px-3 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-200">
+                            <span className="px-3 py-1 text-xs font-semibold tracking-wide rounded-full bg-green-100/80 text-green-700 dark:bg-green-900/40 dark:text-green-300 border border-green-200 dark:border-green-800/50 shadow-sm">
                                 Live
                             </span>
 
@@ -164,7 +164,7 @@ export default function CodingStats() {
 
                         {/* Calendar */}
 
-                        <div className="flex justify-center overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 p-4">
+                        <div className="flex justify-center overflow-x-auto rounded-xl border border-white/50 dark:border-white/10 bg-white/40 dark:bg-slate-800/40 backdrop-blur-sm p-5 shadow-inner">
 
                             <GitHubCalendar
                                 username="ayushsingh1406"
@@ -193,39 +193,39 @@ export default function CodingStats() {
 
                         <div className="grid grid-cols-3 gap-4 mt-6 text-center">
 
-                            <div className="rounded-lg bg-slate-100 dark:bg-slate-800 p-3">
+                            <div className="rounded-xl bg-slate-100/50 dark:bg-slate-800/50 border border-white/40 dark:border-white/5 backdrop-blur-sm p-4 hover:bg-white dark:hover:bg-slate-700/50 transition-colors">
 
                                 <p className="text-lg font-bold">
                                     {repos !== null ? repos : "..."}
                                 </p>
 
-                                <p className="text-xs text-slate-500">
+                                <p className="text-xs font-medium text-slate-600 dark:text-slate-400 mt-1">
                                     Repos
                                 </p>
 
                             </div>
 
 
-                            <div className="rounded-lg bg-slate-100 dark:bg-slate-800 p-3">
+                            <div className="rounded-xl bg-slate-100/50 dark:bg-slate-800/50 border border-white/40 dark:border-white/5 backdrop-blur-sm p-4 hover:bg-white dark:hover:bg-slate-700/50 transition-colors">
 
                                 <p className="text-lg font-bold">
                                     {followers !== null ? followers : "..."}
                                 </p>
 
-                                <p className="text-xs text-slate-500">
+                                <p className="text-xs font-medium text-slate-600 dark:text-slate-400 mt-1">
                                     Followers
                                 </p>
 
                             </div>
 
 
-                            <div className="rounded-lg bg-slate-100 dark:bg-slate-800 p-3">
+                            <div className="rounded-xl bg-slate-100/50 dark:bg-slate-800/50 border border-white/40 dark:border-white/5 backdrop-blur-sm p-4 hover:bg-white dark:hover:bg-slate-700/50 transition-colors">
 
                                 <p className="text-lg font-bold">
                                     {stars !== null ? stars : "..."}
                                 </p>
 
-                                <p className="text-xs text-slate-500">
+                                <p className="text-xs font-medium text-slate-600 dark:text-slate-400 mt-1">
                                     Stars
                                 </p>
 
@@ -241,20 +241,17 @@ export default function CodingStats() {
                             target="_blank"
                             rel="noreferrer"
                             className="
-                            mt-6 inline-flex items-center gap-2
-                            px-4 py-2
-                            rounded-lg
+                            mt-8 inline-flex items-center gap-2
+                            px-6 py-3
+                            rounded-full
                             text-sm font-semibold
-                            border
-                            border-slate-300
-                            dark:border-slate-700
-                            bg-black
+                            bg-slate-900
                             text-white
                             hover:bg-slate-800
                             dark:bg-white
-                            dark:text-black
+                            dark:text-slate-900
                             dark:hover:bg-slate-200
-                            transition
+                            transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5
                             "
                         >
 
@@ -273,26 +270,26 @@ export default function CodingStats() {
                         relative overflow-hidden
                         p-6
                         rounded-2xl
-                        border border-slate-200/70 dark:border-slate-700/70
+                        border border-truffle-200/70 dark:border-truffleDark-800/70
                         bg-gradient-to-br
-                        from-white via-slate-50 to-slate-100
-                        dark:from-slate-900 dark:via-slate-900 dark:to-slate-800
-                        shadow-xl shadow-slate-300/40 dark:shadow-black/40
+                        from-truffle-50 via-truffle-50 to-truffle-100
+                        dark:from-truffleDark-950 dark:via-truffleDark-950 dark:to-truffleDark-900
+                        shadow-xl shadow-truffle-200/40 dark:shadow-black/40
                         transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl
                     ">
 
-                        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(234,179,8,0.15),transparent_60%)]"></div>
+                        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(234,179,8,0.15),transparent_60%)] dark:bg-[radial-gradient(circle_at_top_right,rgba(234,179,8,0.15),transparent_60%)]"></div>
 
 
                         {/* Header */}
 
                         <div className="mb-6">
 
-                            <p className="text-sm text-slate-500 dark:text-slate-400">
+                            <p className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-1">
                                 LeetCode
                             </p>
 
-                            <h3 className="text-xl font-semibold">
+                            <h3 className="text-2xl font-bold">
                                 Problem Solving Stats
                             </h3>
 
@@ -301,7 +298,7 @@ export default function CodingStats() {
 
                         {/* LeetCode Card */}
 
-                        <div className="rounded-xl border border-slate-200 dark:border-slate-700 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 p-3 shadow-inner">
+                        <div className="rounded-xl border border-white/50 dark:border-white/10 bg-white/40 dark:bg-slate-800/40 backdrop-blur-sm p-4 shadow-inner">
 
                             <img
                                 src="https://leetcard.jacoblin.cool/ayushsingh06?theme=dark&font=baloo&ext=contest"
@@ -312,7 +309,7 @@ export default function CodingStats() {
                         </div>
 
 
-                        <p className="mt-6 text-sm text-slate-600 dark:text-slate-300">
+                        <p className="mt-6 text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
                             Includes solved problems, acceptance rate, and contest ranking.
                         </p>
 
@@ -325,13 +322,13 @@ export default function CodingStats() {
                             rel="noreferrer"
                             className="
                             mt-4 inline-flex items-center gap-2
-                            px-4 py-2
-                            rounded-lg
+                            px-6 py-3
+                            rounded-full
                             text-sm font-semibold
                             bg-yellow-500
                             text-white
                             hover:bg-yellow-600
-                            transition
+                            transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5
                             "
                         >
 
