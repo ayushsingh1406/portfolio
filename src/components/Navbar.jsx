@@ -21,10 +21,7 @@ export default function Navbar({ isDark, onThemeToggle }) {
         <a href="#home" className="text-base md:text-lg font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-black text-xs font-black text-white">A</span>
           <span className="leading-none font-semibold tracking-tight">
-            Ayush{" "}
-            <span className="text-gradient hover:opacity-80 transition-opacity">
-              Kumar Singh
-            </span>
+            Ayush Kumar Singh
           </span>
         </a>
 
