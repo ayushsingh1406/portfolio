@@ -6,10 +6,31 @@ export default function Certificates() {
     const certificates = [
         {
             title: "Deep Learning",
-            issuer: "NPTEL",
+            issuer: "IIT Ropar",
             year: "2025",
             file: "/certificates/deep_learning.pdf",
-            logo: "/logos/nptel.png"
+            logo: "/logos/iitropar.png"
+        },
+        {
+            title: "DSA with C++",
+            issuer: "Splen",
+            year: "2025",
+            file: "/certificates/dsa_pep.pdf",
+            logo: "/logos/splen.jpg"
+        },
+        {
+            title: "Computational Theory",
+            issuer: "Infosys",
+            year: "2025",
+            file: "/certificates/ct.pdf",
+            logo: "/logos/infosys.png"
+        },
+        {
+            title: "Java",
+            issuer: "NeoColab",
+            year: "2025",
+            file: "/certificates/java.pdf",
+            logo: "/logos/neocolab.png"
         },
         {
             title: "Data Structures and Algorithms",
@@ -19,11 +40,53 @@ export default function Certificates() {
             logo: "/logos/neocolab.png"
         },
         {
-            title: "DSA with C++",
-            issuer: "Splen",
-            year: "2025",
-            file: "/certificates/dsa_pep.pdf",
-            logo: "/logos/splen.jpg"
+            title: "C++",
+            issuer: "NeoColab",
+            year: "2024",
+            file: "/certificates/cpp.pdf",
+            logo: "/logos/neocolab.png"
+        },
+        {
+            title: "Computer Communications",
+            issuer: "University of Colorado",
+            year: "2024",
+            file: "/certificates/ccs.pdf",
+            logo: "/logos/CU.png"
+        },
+        {
+            title: "Full Stack Development",
+            issuer: "Board Infinity",
+            year: "2024",
+            file: "/certificates/fsd.jpg",
+            logo: "/logos/Board.png"
+        },
+        {
+            title: "Network Communications",
+            issuer: "University of Colorado",
+            year: "2024",
+            file: "/certificates/fonc.pdf",
+            logo: "/logos/CU.png"
+        },
+        {
+            title: "Hardware and Operating Systems",
+            issuer: "IBM",
+            year: "2024",
+            file: "/certificates/hos.pdf",
+            logo: "/logos/IBM.png"
+        },
+        {
+            title: "Machine Learning",
+            issuer: "Board Infinity",
+            year: "2024",
+            file: "/certificates/ML.png",
+            logo: "/logos/Board.png"
+        },
+        {
+            title: "Python",
+            issuer: "HackerRank",
+            year: "2023",
+            file: "/certificates/python.pdf",
+            logo: "/logos/hr.jpg"
         }
     ]
     return (

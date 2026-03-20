@@ -16,9 +16,9 @@ export default function Navbar({ isDark, onThemeToggle }) {
   ]
 
   return (
-    <nav className="fixed top-3 left-1/2 z-50 w-[calc(100%-1.5rem)] md:w-[calc(100%-4rem)] -translate-x-1/2 rounded-full border border-white/20 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur-xl shadow-lg dark:shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
+    <nav className="fixed top-3 left-1/2 z-50 w-[calc(100%-1.5rem)] md:w-[calc(100%-4rem)] -translate-x-1/2 rounded-full border border-white/20 dark:border-white/10 bg-[#10304A]/90 dark:bg-slate-900/60 backdrop-blur-xl shadow-lg dark:shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
-        <a href="#home" className="text-base md:text-lg font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+        <a href="#home" className="text-base md:text-lg font-bold tracking-tight text-[#E2D0B6] dark:text-white flex items-center gap-2">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-black text-xs font-black text-white">A</span>
           <span className="leading-none font-semibold tracking-tight">
             Ayush Kumar Singh
@@ -26,16 +26,16 @@ export default function Navbar({ isDark, onThemeToggle }) {
         </a>
 
         <div className="hidden md:flex items-center gap-6">
-          <ul className="flex items-center gap-4 text-sm font-medium text-slate-600 dark:text-slate-300">
+          <ul className="flex items-center gap-4 text-sm font-medium text-[#E2D0B6] dark:text-slate-300">
             {navLinks.map((link, index) => (
               <li key={index} className="group relative">
                 <a
                   href={link.href}
-                  className="rounded-full px-3 py-1.5 transition text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-cyan-400"
+                  className="rounded-full px-3 py-1.5 transition text-[#E2D0B6] hover:text-[#F08D00] dark:text-slate-300 dark:hover:text-cyan-400"
                 >
                   {link.name}
                 </a>
-                <span className="absolute -bottom-1 left-1/2 h-0.5 w-0 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 dark:from-cyan-400 dark:to-blue-500 transition-all duration-300 group-hover:w-7 group-hover:-translate-x-1/2" />
+                <span className="absolute -bottom-1 left-1/2 h-0.5 w-0 rounded-full bg-[#F08D00] dark:bg-gradient-to-r dark:from-cyan-400 dark:to-blue-500 transition-all duration-300 group-hover:w-7 group-hover:-translate-x-1/2" />
               </li>
             ))}
           </ul>

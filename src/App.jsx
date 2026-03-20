@@ -37,19 +37,17 @@ function App() {
   }
 
   return (
-    <div className={`relative min-h-screen transition-all duration-500 overflow-x-hidden ${isDark ? 'bg-slate-950 text-slate-200' : 'bg-slate-50 text-slate-800'}`}>
-      
+    <div className={`relative min-h-screen transition-all duration-500 overflow-x-hidden ${isDark ? 'bg-slate-950 text-slate-200' : 'bg-[#E2D0B6] text-slate-800'}`}>
+
       {/* Background Pattern and Animated Orbs */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         {/* Dot Pattern */}
-        <div className="absolute inset-0 bg-dot-pattern opacity-60 dark:opacity-20 transition-opacity duration-500"></div>
-        
-        {/* Animated Orbs */}
-        <div className="absolute inset-0 overflow-hidden transition-opacity duration-700">
-          <div className={`absolute -top-[10%] -left-[10%] w-[40%] h-[40%] rounded-full mix-blend-multiply filter blur-[100px] opacity-50 animate-blob ${isDark ? 'bg-indigo-600/40' : 'bg-blue-300'}`}></div>
-          <div className={`absolute top-[20%] -right-[10%] w-[40%] h-[40%] rounded-full mix-blend-multiply filter blur-[100px] opacity-50 animate-blob animation-delay-2000 ${isDark ? 'bg-fuchsia-600/40' : 'bg-purple-300'}`}></div>
-          <div className={`absolute -bottom-[10%] left-[20%] w-[40%] h-[40%] rounded-full mix-blend-multiply filter blur-[100px] opacity-50 animate-blob animation-delay-4000 ${isDark ? 'bg-cyan-600/40' : 'bg-pink-300'}`}></div>
-        </div>
+        <div className="absolute inset-0 bg-dot-pattern opacity-60 dark:opacity-0 transition-opacity duration-500"></div>
+
+        {/* Spider Web Pattern - Light Mode Only */}
+        <div className={`absolute inset-0 bg-web-pattern ${isDark ? 'opacity-0' : 'opacity-100'} transition-opacity duration-500`}></div>
+
+        {/* Animated Orbs - REMOVED */}
       </div>
 
       <div className="relative z-10 w-full h-full">
@@ -75,7 +73,7 @@ function App() {
           <About />
           <Skills />
           <Projects />
-          <Timeline/>
+          <Timeline />
           <CodingStats />
           <Certificates />
           <Contact />

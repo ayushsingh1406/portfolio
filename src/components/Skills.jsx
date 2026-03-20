@@ -107,8 +107,8 @@ export default function Skills() {
             <Reveal>
 
                 <div className="mb-8">
-                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-blue-600 dark:text-cyan-400">Skills</p>
-                    <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Technologies & Tools I Use</h2>
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#993131] dark:text-cyan-400">Skills</p>
+                    <h2 className="mt-2 text-4xl md:text-5xl font-bold text-[#10304A] dark:text-white">Technologies & Tools I Use</h2>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">

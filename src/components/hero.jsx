@@ -9,19 +9,17 @@ export default function Hero() {
       id="home"
       className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-28 scroll-mt-24 text-slate-900 dark:text-slate-100"
     >
-      {/* Background glow */}
-      <div className="absolute -top-24 -left-24 w-80 h-80 bg-gradient-to-br from-blue-400 to-indigo-400 dark:from-cyan-500/30 dark:to-blue-600/30 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-indigo-300 via-purple-300 to-pink-300 dark:from-purple-600/20 dark:via-fuchsia-500/20 dark:to-pink-500/20 rounded-full blur-3xl opacity-30 animate-pulse animation-delay-2000"></div>
+      {/* Background glow - REMOVED */}
 
       <motion.div
-        className="relative overflow-hidden rounded-[2.5rem] border border-white/40 bg-white/40 p-10 md:p-14 shadow-2xl shadow-indigo-500/10 dark:border-white/10 dark:bg-slate-900/40 dark:shadow-black/60 backdrop-blur-2xl flex flex-col md:flex-row items-center justify-between gap-12 group"
+        className="relative overflow-hidden rounded-[2.5rem] border border-white/40 bg-[#10304A]/60 dark:border-white/10 dark:bg-slate-900/40 p-10 md:p-14 shadow-2xl shadow-[#10304A]/20 dark:shadow-black/60 backdrop-blur-2xl flex flex-col md:flex-row items-center justify-between gap-12 group"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         {/* Background */}
-        <div className="absolute inset-0 opacity-20 dark:opacity-40 mix-blend-overlay">
-          <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-transparent to-indigo-50/60 dark:from-slate-800/80 dark:via-transparent dark:to-indigo-900/40" />
+        <div className="absolute inset-0 opacity-20 mix-blend-overlay">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#E2D0B6]/80 via-transparent to-[#246869]/40 dark:from-slate-800/80 dark:via-transparent dark:to-indigo-900/40" />
         </div>
 
         <div className="relative flex flex-col md:flex-row items-center justify-between gap-10 w-full">
@@ -32,7 +30,7 @@ export default function Hero() {
               Hi, I'm Ayush
             </h1>
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-cyan-400 dark:to-blue-500">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#0d96ab' }}>
               <ReactTyped
                 strings={[
                   "Full Stack Developer",
@@ -45,7 +43,7 @@ export default function Hero() {
               />
             </h2>
 
-            <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 mb-10 max-w-xl leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-800 dark:text-slate-300 mb-10 max-w-xl leading-relaxed">
               Building impactful digital solutions with expertise in web development, AI, and scalable systems. Explore my work, skills, and journey below.
             </p>
 
@@ -64,7 +62,7 @@ export default function Hero() {
                 href="https://linkedin.com/in/ayushsingh1406"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 bg-blue-600 dark:bg-cyan-500 text-white dark:text-slate-950 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg shadow-blue-500/25 dark:shadow-cyan-500/25 transition-all duration-300"
+                className="flex items-center gap-2 px-6 py-3 bg-[#0d96ab] text-white dark:text-slate-950 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg shadow-[#0d96ab]/25 transition-all duration-300"
               >
                 <FaLinkedin /> LinkedIn
               </a>

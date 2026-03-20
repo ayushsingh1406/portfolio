@@ -13,9 +13,9 @@ export default function Contact() {
 
         <div className="grid gap-4 md:grid-cols-3">
           {[
-            ["Email", "ayushsingh1406p@gmail.com", "bg-slate-100/70 text-slate-800 dark:bg-slate-800/70 dark:text-slate-200 group-hover:bg-blue-600 group-hover:text-white dark:group-hover:bg-cyan-500 dark:group-hover:text-slate-950", <FaEnvelope size={20}/>],
-            ["GitHub", "github.com/ayushsingh1406", "bg-slate-100/70 text-slate-800 dark:bg-slate-800/70 dark:text-slate-200 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-slate-900", <FaGithub size={20}/>],
-            ["LinkedIn", "linkedin.com/in/ayushsingh1406", "bg-slate-100/70 text-slate-800 dark:bg-slate-800/70 dark:text-slate-200 group-hover:bg-[#0A66C2] group-hover:text-white dark:group-hover:bg-[#0A66C2]", <FaLinkedin size={20}/>],
+            ["Email", "ayushsingh1406p@gmail.com", "bg-slate-100/70 text-slate-800 dark:bg-slate-800/70 dark:text-slate-200 group-hover:bg-blue-600 group-hover:text-white dark:group-hover:bg-cyan-500 dark:group-hover:text-slate-950", <FaEnvelope size={20} />],
+            ["GitHub", "github.com/ayushsingh1406", "bg-slate-100/70 text-slate-800 dark:bg-slate-800/70 dark:text-slate-200 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-slate-900", <FaGithub size={20} />],
+            ["LinkedIn", "linkedin.com/in/ayushsingh1406", "bg-slate-100/70 text-slate-800 dark:bg-slate-800/70 dark:text-slate-200 group-hover:bg-[#0A66C2] group-hover:text-white dark:group-hover:bg-[#0A66C2]", <FaLinkedin size={20} />],
           ].map(([title, value, colorClass, icon]) => (
             <a key={title} href={title === "Email" ? "mailto:ayushsingh1406p@gmail.com" : title === "GitHub" ? "https://github.com/ayushsingh1406" : "https://linkedin.com/in/ayushsingh1406"} target="_blank" rel="noreferrer" className="group rounded-[2rem] border border-white/40 dark:border-white/10 bg-white/60 dark:bg-slate-900/50 backdrop-blur-xl p-6 shadow-xl shadow-indigo-500/5 dark:shadow-black/40 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-cyan-500/10 transition-all duration-500">
               <div className="flex items-center gap-3">

@@ -11,6 +11,7 @@ html {
   .animation-delay-2000 {
     animation-delay: 2s;
   }
+
   .animation-delay-4000 {
     animation-delay: 4s;
   }
@@ -35,15 +36,35 @@ html {
 }
 
 @keyframes textShine {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 200% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
 }
 
 @keyframes theme-glow {
-  0% { transform: scale(0.8); opacity: 0; }
-  20% { transform: scale(1.25); opacity: 0.95; }
-  50% { transform: scale(1.15); opacity: 0.8; }
-  100% { transform: scale(0.9); opacity: 0; }
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  20% {
+    transform: scale(1.25);
+    opacity: 0.95;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
 }
 
 .animate-theme-glow {
@@ -51,9 +72,20 @@ html {
 }
 
 @keyframes theme-pop {
-  0% { transform: scale(0.8); opacity: 0.2; }
-  25% { transform: scale(1.1); opacity: 1; }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0.8);
+    opacity: 0.2;
+  }
+
+  25% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .animate-pop {
@@ -64,6 +96,21 @@ html {
 .bg-dot-pattern {
   background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
   background-size: 24px 24px;
+}
+
+/* Spider Web Background Pattern */
+.bg-web-pattern {
+  background-image: url('/images/web.png');
+  background-repeat: repeat;
+  background-size: 200px 200px; /* Good spacing between web patterns */
+  background-position: 0 0;
+  opacity: 0.08; /* Slightly darker */
+  mix-blend-mode: multiply;
+  filter: invert(1); /* White web in light mode */
+}
+
+.dark .bg-web-pattern {
+  filter: invert(0); /* Black web in dark mode */
 }
 
 .dark .bg-dot-pattern {

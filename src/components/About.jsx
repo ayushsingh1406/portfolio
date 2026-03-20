@@ -11,8 +11,8 @@ export default function About() {
 
         {/* Section Title */}
         <div className="mb-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-blue-600 dark:text-cyan-400">About Me</p>
-          <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Who am I ?</h2>
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#993131] dark:text-cyan-400">About Me</p>
+          <h2 className="mt-2 text-4xl md:text-5xl font-bold text-[#10304A] dark:text-white">Who am I ?</h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -22,9 +22,9 @@ export default function About() {
 
             {/* Intro */}
             <p>
-              I'm a <span className="font-semibold text-slate-900 dark:text-white">
-              Computer Science and Engineering student</span> specializing in 
-              <span className="font-semibold text-blue-600 dark:text-cyan-400"> Machine Learning</span>.
+              I'm a <span className="font-semibold text-[#10304A] dark:text-white">
+                Computer Science and Engineering student</span> specializing in
+              <span className="font-semibold text-[#993131] dark:text-cyan-400"> Machine Learning</span>.
               I enjoy building software that solves practical problems and improves everyday experiences
               through technology.
             </p>
@@ -32,10 +32,10 @@ export default function About() {
             {/* Skills */}
             <p>
               My development experience includes working with
-              <span className="font-medium text-slate-900 dark:text-white"> C++, Python, and JavaScript</span>,
+              <span className="font-medium text-[#10304A] dark:text-white"> C++, Python, and JavaScript</span>,
               along with modern technologies such as
-              <span className="font-medium text-blue-600 dark:text-cyan-400">
-              {" "}React, Tailwind CSS, HTML, CSS, and Django</span>.
+              <span className="font-medium text-[#C65000] dark:text-cyan-400">
+                {" "}React, Tailwind CSS, HTML, CSS, and Django</span>.
               I actively practice <span className="font-medium">data structures and algorithms</span> and enjoy
               building projects that strengthen both my problem-solving ability and my understanding of
               full-stack development.
@@ -45,8 +45,8 @@ export default function About() {
             <p>
               I’m passionate about continuous improvement, whether it's learning new technologies,
               solving complex problems, or building products that create real value.
-              My goal is to grow into a strong <span className="font-semibold text-slate-900 dark:text-white">
-              software engineer</span> capable of designing scalable systems and contributing
+              My goal is to grow into a strong <span className="font-semibold text-[#10304A] dark:text-white">
+                software engineer</span> capable of designing scalable systems and contributing
               to impactful technology.
             </p>
 
