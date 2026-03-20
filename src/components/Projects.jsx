@@ -31,6 +31,15 @@ export default function Projects() {
       image: "/images/stock3.jpg",
       github: "https://github.com/ayushsingh1406/DevSphere.git",
       demo: ""
+    },
+    {
+      title: "Static E-Commerce Website",
+      description:
+        "Static E-commerce webiste built solely using static technologies and inspired from powerlook.in",
+      tech: ["HTML", "CSS","JS"],
+      image: "/images/e-commerce.jpg",
+      github: "https://github.com/ayushsingh1406/StreetStyle.git",
+      demo: "https://s-style.netlify.app"
     }
   ]
 
