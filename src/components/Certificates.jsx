@@ -93,7 +93,7 @@ export default function Certificates() {
         <section id="certificates" className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24 text-slate-900 dark:text-white">
             <Reveal>
                 <div className="mb-8">
-                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-blue-600 dark:text-cyan-400">Certifications</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#993131] dark:text-cyan-400">Certifications</p>
                     <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Professional Credentials & Achievements</h2>
                 </div>
 
@@ -105,13 +105,13 @@ export default function Certificates() {
                                     <img src={cert.logo} alt={cert.issuer} className="h-8 w-8 object-contain" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">{cert.title}</h3>
+                                    <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-[#993131] dark:group-hover:text-[#0d96ab] transition-colors">{cert.title}</h3>
                                     <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">{cert.issuer}</p>
                                 </div>
                             </div>
                             <div className="mt-5 pt-4 border-t border-slate-200/50 dark:border-slate-800/50 flex items-center justify-between text-slate-600 dark:text-slate-400">
                                 <span className="text-xs font-semibold tracking-wider">Year: {cert.year}</span>
-                                <span className="text-xs font-bold text-blue-600 dark:text-cyan-400 flex items-center gap-1 group-hover:gap-2 transition-all">View <FaExternalLinkAlt className="text-[10px]" /></span>
+                                <span className="text-xs font-bold text-[#993131] dark:text-[#0d96ab] flex items-center gap-1 group-hover:gap-2 transition-all">View <FaExternalLinkAlt className="text-[10px]" /></span>
                             </div>
                         </a>
                     ))}

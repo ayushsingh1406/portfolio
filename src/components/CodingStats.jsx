@@ -105,7 +105,7 @@ export default function CodingStats() {
                 <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
 
                     <div className="mb-8">
-                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-blue-600 dark:text-cyan-400">Coding Stats</p>
+                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#993131] dark:text-cyan-400">Coding Stats</p>
                         <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">My Coding Journey & Insights</h2>
                     </div>
                     <p className="text-sm text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">

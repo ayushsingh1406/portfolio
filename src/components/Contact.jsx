@@ -6,7 +6,7 @@ export default function Contact() {
     <section id="contact" className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24 text-slate-900 dark:text-white">
       <Reveal>
         <div className="mb-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-blue-600 dark:text-cyan-400">Contact</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#993131] dark:text-cyan-400">Contact</p>
           <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Connect for Collaboration & Opportunities</h2>
         </div>
         <p className="max-w-3xl text-slate-600 dark:text-slate-300 mb-12 text-lg leading-relaxed font-light">I’m actively looking for opportunities in software engineering, AI product development, and full stack systems. Reach out for collaborative projects, internships, or mentorship conversations.</p>
