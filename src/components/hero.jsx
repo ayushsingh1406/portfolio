@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { ReactTyped } from "react-typed"
 
-export default function Hero() {
+export default function Hero({ isDark }) {
   return (
     <section
       id="home"
@@ -30,7 +30,7 @@ export default function Hero() {
               Hi, I'm Ayush
             </h1>
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#0d96ab' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: isDark ? '#0d96ab' : '#d0c0a8' }}>
               <ReactTyped
                 strings={[
                   "Full Stack Developer",
@@ -80,7 +80,7 @@ export default function Hero() {
 
           {/* IMAGE */}
           <div className="flex-1 flex justify-center order-1 md:order-2">
-            <ImageSwitcher />
+            <ImageSwitcher isDark={isDark} />
           </div>
         </div>
       </motion.div>
@@ -90,7 +90,7 @@ export default function Hero() {
 
 /* IMAGE SWITCHER */
 
-function ImageSwitcher() {
+function ImageSwitcher({ isDark }) {
   const [index, setIndex] = useState(0)
 
   const images = [
@@ -109,7 +109,7 @@ function ImageSwitcher() {
       className="relative cursor-pointer"
     >
       {/* STACK CARD 1 (theme aware) */}
-      <div className="absolute w-56 h-72 md:w-64 md:h-80 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-cyan-900/50 dark:to-blue-900/50 border border-white/50 dark:border-white/10 rounded-[2rem] rotate-[8deg] top-4 left-4 z-0 transition-transform duration-500 group-hover:rotate-[12deg]"></div>
+      <div className="absolute w-56 h-72 md:w-64 md:h-80 border border-white/50 dark:border-white/10 rounded-[2rem] rotate-[8deg] top-4 left-4 z-0 transition-transform duration-500 group-hover:rotate-[12deg]" style={{ backgroundColor: isDark ? '#2d5a70' : '#d0c0a8' }}></div>
 
       {/* STACK CARD 2 */}
       <div className="absolute w-56 h-72 md:w-64 md:h-80 bg-white/60 dark:bg-slate-800/60 border border-white/50 dark:border-white/10 backdrop-blur-md rounded-[2rem] -rotate-[4deg] top-2 left-2 z-0 shadow-xl transition-transform duration-500 group-hover:-rotate-[8deg]"></div>

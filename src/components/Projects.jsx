@@ -80,7 +80,7 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition" />
               </div>
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#993131] dark:group-hover:text-[#0d96ab] transition-colors">{project.title}</h3>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#C65000] dark:group-hover:text-[#0d96ab] transition-colors">{project.title}</h3>
                 <p className="text-slate-600 dark:text-slate-400 mb-5 text-sm leading-relaxed font-light flex-grow">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech, i) => (

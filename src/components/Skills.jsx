@@ -150,22 +150,52 @@ transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 dark:hover
 flex items-center gap-4
 p-3
 rounded-xl
-bg-slate-100/50 dark:bg-slate-800/50
-hover:bg-white dark:hover:bg-slate-700
+bg-slate-100/40 dark:bg-slate-800/40
+hover:bg-white dark:hover:bg-slate-800/90
+border border-transparent hover:border-slate-200 dark:hover:border-slate-700
+hover:-translate-y-0.5
 transition-all duration-300
 cursor-pointer
 group
+relative
+overflow-hidden
 "
+                                        style={{
+                                            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            e.currentTarget.style.boxShadow = `0 12px 20px -8px ${skill.icon.props.color}40`;
+                                            e.currentTarget.style.borderColor = `${skill.icon.props.color}20`;
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.currentTarget.style.boxShadow = '';
+                                            e.currentTarget.style.borderColor = '';
+                                        }}
                                     >
 
-                                        <div className="
-w-10 h-10
-rounded-lg
-bg-white dark:bg-slate-900
+                                        <div 
+                                            className="
+w-11 h-11
+flex items-center justify-center
+rounded-2xl
+bg-white dark:bg-slate-800/80
+backdrop-blur-sm
+border border-white/20 dark:border-white/10
 shadow-sm
-group-hover:scale-110 transition-transform duration-300
-">
-                                            {skill.icon}
+group-hover:scale-110 group-hover:-translate-y-1 group-hover:rotate-[6deg]
+transition-all duration-300
+relative
+"
+                                            style={{
+                                                boxShadow: `0 8px 16px -3px ${skill.icon.props.color}25, 0 4px 6px -4px ${skill.icon.props.color}20`,
+                                                borderColor: `${skill.icon.props.color}30`,
+                                                borderWidth: '1.5px',
+                                            }}
+                                        >
+                                            <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/5 dark:to-white/5 rounded-2xl pointer-events-none"></div>
+                                            <div className="filter drop-shadow-[0_2px_1.5px_rgba(0,0,0,0.18)]">
+                                                {skill.icon}
+                                            </div>
                                         </div>
 
                                         <p className="text-sm font-semibold text-slate-700 dark:text-slate-300 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
