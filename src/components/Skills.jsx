@@ -101,41 +101,25 @@ export default function Skills() {
 
         <section
             id="skills"
-            className="max-w-7xl mx-auto px-6 py-24 scroll-mt-24 text-slate-900 dark:text-white"
+            className="relative w-full max-w-7xl mx-auto px-6 py-24 scroll-mt-24 text-slate-900 dark:text-white"
         >
 
             <Reveal>
 
-                <div className="mb-8">
+                <div className="relative z-10 mb-8">
                     <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#993131] dark:text-cyan-400">Skills</p>
                     <h2 className="mt-2 text-4xl md:text-5xl font-bold text-[#10304A] dark:text-white font-display">Technologies & Tools I Use</h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16 relative z-10">
 
                     {skillGroups.map((group, i) => (
 
-                        <div
-                            key={i}
-                            className="
-relative
-overflow-hidden
-rounded-[2rem]
-p-8
-border border-white/40 dark:border-white/10
-bg-white/60 dark:bg-slate-900/50
-backdrop-blur-xl
-shadow-xl shadow-indigo-500/5 dark:shadow-black/40
-transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-cyan-500/10 hover:-translate-y-1
-"
-                        >
+                        <div key={i} className="relative z-10 transition-all duration-500">
 
-                            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.12),transparent_60%)] dark:bg-[radial-gradient(circle_at_top_right,rgba(6,182,212,0.12),transparent_60%)]"></div>
-
-                            <h3 className="text-xl font-bold mb-6 text-slate-900 dark:text-white font-display">
+                            <h3 className="text-xl font-bold mb-6 text-slate-900 dark:text-white font-display pl-3 border-l-4 border-[#993131] dark:border-[#0d96ab]">
                                 {group.title}
                             </h3>
-
 
                             <div className="flex flex-col gap-4">
 
@@ -150,10 +134,9 @@ transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 dark:hover
 flex items-center gap-4
 p-3
 rounded-xl
-bg-slate-100/40 dark:bg-slate-800/40
-hover:bg-white dark:hover:bg-slate-800/90
-border border-transparent hover:border-slate-200 dark:hover:border-slate-700
-hover:-translate-y-0.5
+bg-white/40 dark:bg-slate-900/40 backdrop-blur-md
+border border-transparent
+hover:-translate-y-1
 transition-all duration-300
 cursor-pointer
 group
@@ -164,12 +147,14 @@ overflow-hidden
                                             transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                                         }}
                                         onMouseEnter={(e) => {
-                                            e.currentTarget.style.boxShadow = `0 12px 20px -8px ${skill.icon.props.color}40`;
-                                            e.currentTarget.style.borderColor = `${skill.icon.props.color}20`;
+                                            e.currentTarget.style.boxShadow = `0 12px 20px -8px ${skill.icon.props.color}60`;
+                                            e.currentTarget.style.borderColor = `${skill.icon.props.color}40`;
+                                            e.currentTarget.style.backgroundColor = `${skill.icon.props.color}15`;
                                         }}
                                         onMouseLeave={(e) => {
                                             e.currentTarget.style.boxShadow = '';
                                             e.currentTarget.style.borderColor = '';
+                                            e.currentTarget.style.backgroundColor = '';
                                         }}
                                     >
 
@@ -179,7 +164,6 @@ w-11 h-11
 flex items-center justify-center
 rounded-2xl
 bg-white dark:bg-slate-800/80
-backdrop-blur-sm
 border border-white/20 dark:border-white/10
 shadow-sm
 group-hover:scale-110 group-hover:-translate-y-1 group-hover:rotate-[6deg]
@@ -187,8 +171,8 @@ transition-all duration-300
 relative
 "
                                             style={{
-                                                boxShadow: `0 8px 16px -3px ${skill.icon.props.color}25, 0 4px 6px -4px ${skill.icon.props.color}20`,
-                                                borderColor: `${skill.icon.props.color}30`,
+                                                boxShadow: `0 8px 16px -3px ${skill.icon.props.color}30, 0 4px 6px -4px ${skill.icon.props.color}20`,
+                                                borderColor: `${skill.icon.props.color}40`,
                                                 borderWidth: '1.5px',
                                             }}
                                         >
@@ -198,7 +182,7 @@ relative
                                             </div>
                                         </div>
 
-                                        <p className="text-sm font-semibold text-slate-700 dark:text-slate-300 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
+                                        <p className="text-sm font-semibold text-slate-700 dark:text-slate-300 transition-all duration-300 group-hover:text-[#10304A] dark:group-hover:text-cyan-400 group-hover:drop-shadow-md">
                                             {skill.name}
                                         </p>
 

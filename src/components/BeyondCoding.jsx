@@ -1,29 +1,33 @@
-import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
 import Reveal from "./Reveal"
 
 export default function BeyondCoding() {
-  const [activeIdx, setActiveIdx] = useState(0)
-
-  // Array of images with descriptions for alt text
   const images = [
-    { src: "/images/powerlifting.jpeg", alt: "Powerlifting setup" },
-    { src: "/images/pose.jpeg", alt: "Powerlifting pose" },
-    { src: "/images/medal.jpeg", alt: "Powerlifting competition medals" }
+    { 
+      src: "/images/powerlifting.jpeg", 
+      alt: "Main heavy lift", 
+      styles: "col-span-4 row-span-2" 
+    },
+    { 
+      src: "/images/pose.jpeg", 
+      alt: "Powerlifting pose", 
+      styles: "col-span-2 row-span-1" 
+    },
+    { 
+      src: "/images/rack.jpeg", 
+      alt: "Squat rack setup", 
+      styles: "col-span-2 row-span-1" 
+    },
+    { 
+      src: "/images/back.jpeg", 
+      alt: "Back engagement", 
+      styles: "col-span-3 row-span-1" 
+    },
+    { 
+      src: "/images/medal.jpeg", 
+      alt: "Competition medals", 
+      styles: "col-span-3 row-span-1" 
+    }
   ]
-
-  // Automatically cycle images every 4 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIdx((prevIdx) => (prevIdx + 1) % images.length)
-    }, 4000)
-    return () => clearInterval(interval)
-  }, [images.length])
-
-  // Click handler to manually cycle images
-  const cycleImages = () => {
-    setActiveIdx((prevIdx) => (prevIdx + 1) % images.length)
-  }
 
   return (
     <section
@@ -41,88 +45,21 @@ export default function BeyondCoding() {
         {/* Animated Image Stack */}
         <div className="lg:w-1/2 w-full">
           <Reveal>
-            <div
-              className="relative flex justify-center items-center w-full h-[350px] sm:h-[450px] lg:h-[500px] cursor-pointer mt-8 lg:mt-0"
-              onClick={cycleImages}
-              title="Click to change images"
-            >
-              <AnimatePresence>
-                {images.map((img, index) => {
-                  // Calculate position relative to currently active index
-                  const offset = (index - activeIdx + images.length) % images.length
-
-                  // Configuration for the stack visual (front, middle, back)
-                  let zIndex = 0
-                  let xOffset = 0
-                  let yOffset = 0
-                  let scale = 1
-                  let rotate = 0
-                  let opacity = 1
-                  let filter = "grayscale(0%)"
-
-                  if (offset === 0) {
-                    // Front image
-                    zIndex = 30
-                    scale = 1
-                    rotate = 0
-                    xOffset = 0
-                    yOffset = 0
-                  } else if (offset === 1) {
-                    // Middle image (Right & Back)
-                    zIndex = 20
-                    scale = 0.9
-                    rotate = 6
-                    xOffset = 30
-                    yOffset = 15
-                    filter = "grayscale(30%) brightness(80%)"
-                  } else if (offset === 2) {
-                    // Back image (Left & Furthest Back)
-                    zIndex = 10
-                    scale = 0.8
-                    rotate = -8
-                    xOffset = -30
-                    yOffset = 30
-                    filter = "grayscale(60%) brightness(60%)"
-                  }
-
-                  return (
-                    <motion.div
-                      key={img.src}
-                      className="absolute shadow-2xl rounded-[2rem] overflow-hidden border-4 border-white dark:border-slate-800"
-                      initial={false}
-                      animate={{
-                        zIndex,
-                        scale,
-                        rotate,
-                        x: xOffset,
-                        y: yOffset,
-                        opacity,
-                        filter
-                      }}
-                      transition={{
-                        duration: 0.8,
-                        ease: "easeInOut"
-                      }}
-                      style={{
-                        width: "280px",
-                        height: "380px",
-                        maxWidth: "80%",
-                        maxHeight: "100%",
-                      }}
-                    >
-                      <div className="w-full h-full relative">
-                        <img
-                          src={img.src}
-                          alt={img.alt}
-                          className="w-full h-full object-cover"
-                        />
-                        {/* Aesthetic overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
-                      </div>
-                    </motion.div>
-                  )
-                })}
-              </AnimatePresence>
+            <div className="grid grid-cols-6 grid-rows-3 gap-3 sm:gap-4 w-full h-[400px] sm:h-[500px] lg:h-[600px] mt-8 lg:mt-0">
+              {images.map((img) => (
+                <div
+                  key={img.src}
+                  className={`relative shadow-2xl rounded-2xl overflow-hidden border-[4px] border-[#D2C4B4] dark:border-[#0d96ab]/60 transition-all hover:scale-[1.03] duration-300 hover:z-10 group ${img.styles}`}
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  {/* Premium Aesthetic Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-80 pointer-events-none" />
+                </div>
+              ))}
             </div>
           </Reveal>
         </div>
@@ -155,7 +92,7 @@ export default function BeyondCoding() {
             </div>
           </Reveal>
         </div>
-      </div>
-    </section>
+      </div >
+    </section >
   )
 }

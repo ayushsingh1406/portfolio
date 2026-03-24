@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
-import { ReactTyped } from "react-typed"
 
 export default function Hero({ isDark }) {
   return (
@@ -26,21 +25,12 @@ export default function Hero({ isDark }) {
 
           {/* TEXT */}
           <div className="flex-1 relative z-10 order-2 md:order-1 mt-6 md:mt-0">
-            <h1 className="text-6xl md:text-7xl font-black mb-6 tracking-tight text-slate-900 dark:text-white font-display">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 tracking-tight text-slate-900 dark:text-white font-display whitespace-nowrap">
               Hi, I'm Ayush
             </h1>
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-display" style={{ color: isDark ? '#0d96ab' : '#d0c0a8' }}>
-              <ReactTyped
-                strings={[
-                  "Full Stack Developer",
-                  "Machine Learning Enthusiast"
-                ]}
-                typeSpeed={60}
-                backSpeed={40}
-                loop
-                showCursor={false}
-              />
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 font-display" style={{ color: isDark ? '#0d96ab' : '#d0c0a8' }}>
+              Full Stack Engineer & ML Enthusiast
             </h2>
 
             <p className="text-lg md:text-xl text-slate-800 dark:text-slate-300 mb-10 max-w-xl leading-relaxed">
