@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,6 +7,26 @@
 html {
   scroll-behavior: smooth;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+::selection {
+  background-color: #0d96ab;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #0d96ab;
+  color: #ffffff;
+}
+
+.dark ::selection {
+  background-color: #8b5cf6;
+  color: #ffffff;
+}
+
+.dark ::-moz-selection {
+  background-color: #8b5cf6;
+  color: #ffffff;
 }
 
 @layer utilities {
