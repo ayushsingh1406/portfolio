@@ -10,6 +10,8 @@ export default {
       fontFamily: {
         sans: ['Plus Jakarta Sans', 'sans-serif'],
         display: ['Space Grotesk', 'sans-serif'],
+        outfit: ['Outfit', 'sans-serif'],
+        syne: ['Syne', 'sans-serif'],
       },
       animation: {
         blob: "blob 7s infinite",

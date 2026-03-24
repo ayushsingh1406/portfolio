@@ -25,11 +25,11 @@ export default function Hero({ isDark }) {
 
           {/* TEXT */}
           <div className="flex-1 relative z-10 order-2 md:order-1 mt-6 md:mt-0">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 tracking-tight text-slate-900 dark:text-white font-display whitespace-nowrap">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 tracking-tight text-slate-900 dark:text-white font-outfit whitespace-nowrap">
               Hi, I'm Ayush
             </h1>
 
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 font-display" style={{ color: isDark ? '#0d96ab' : '#d0c0a8' }}>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 font-syne" style={{ color: isDark ? '#0d96ab' : '#d0c0a8' }}>
               Full Stack Engineer & ML Enthusiast
             </h2>
 
