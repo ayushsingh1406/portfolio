@@ -7,6 +7,10 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Outfit', 'sans-serif'],
+        display: ['Syne', 'sans-serif'],
+      },
       animation: {
         blob: "blob 7s infinite",
       },

@@ -8,6 +8,7 @@ import Certificates from "./components/Certificates"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import CodingStats from "./components/CodingStats"
+import BeyondCoding from "./components/BeyondCoding"
 import ScrollProgress from "./components/ScrollProgress"
 import Timeline from "./components/timeline"
 
@@ -76,6 +77,7 @@ function App() {
           <Timeline />
           <CodingStats />
           <Certificates />
+          <BeyondCoding />
           <Contact />
         </main>
         <Footer />

@@ -12,7 +12,7 @@ export default function About() {
         {/* Section Title */}
         <div className="mb-8">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#993131] dark:text-cyan-400">About Me</p>
-          <h2 className="mt-2 text-4xl md:text-5xl font-bold text-[#10304A] dark:text-white">Who am I ?</h2>
+          <h2 className="mt-2 text-4xl md:text-5xl font-bold text-[#10304A] dark:text-white font-display">Who am I ?</h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">

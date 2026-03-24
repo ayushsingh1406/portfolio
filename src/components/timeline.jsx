@@ -100,7 +100,7 @@ export default function Timeline() {
 			<Reveal>
 				<div className="mb-8">
 					<p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#993131] dark:text-cyan-400">Timeline</p>
-					<h2 className="mt-2 text-4xl md:text-5xl font-bold text-[#10304A] dark:text-white">Milestones & Growth Over Time</h2>
+					<h2 className="mt-2 text-4xl md:text-5xl font-bold text-[#10304A] dark:text-white font-display">Milestones & Growth Over Time</h2>
 				</div>
 
 				<div className="relative border-l-2 border-[#993131] dark:border-cyan-400 pl-8 ml-4 md:ml-0">
@@ -111,7 +111,7 @@ export default function Timeline() {
 									{item.icon}
 								</div>
 								<div className="ml-8">
-									<h3 className={`text-2xl font-bold mb-1 text-slate-900 dark:text-white ${item.hoverColor} transition-colors`}>
+									<h3 className={`text-2xl font-bold mb-1 text-slate-900 dark:text-white ${item.hoverColor} transition-colors font-display`}>
 										{item.title}
 									</h3>
 									<span className="block text-sm font-semibold tracking-wider text-blue-600 dark:text-cyan-500 mb-3">{item.date}</span>

@@ -94,7 +94,7 @@ export default function Certificates() {
             <Reveal>
                 <div className="mb-8">
                     <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#993131] dark:text-cyan-400">Certifications</p>
-                    <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Professional Credentials & Achievements</h2>
+                    <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white font-display">Professional Credentials & Achievements</h2>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -105,7 +105,7 @@ export default function Certificates() {
                                     <img src={cert.logo} alt={cert.issuer} className="h-8 w-8 object-contain" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-[#993131] dark:group-hover:text-[#0d96ab] transition-colors">{cert.title}</h3>
+                                    <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-[#993131] dark:group-hover:text-[#0d96ab] transition-colors font-display">{cert.title}</h3>
                                     <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">{cert.issuer}</p>
                                 </div>
                             </div>

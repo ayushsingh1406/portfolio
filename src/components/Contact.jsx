@@ -7,7 +7,7 @@ export default function Contact() {
       <Reveal>
         <div className="mb-8">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#993131] dark:text-cyan-400">Contact</p>
-          <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Connect for Collaboration & Opportunities</h2>
+          <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white font-display">Connect for Collaboration & Opportunities</h2>
         </div>
         <p className="max-w-3xl text-slate-600 dark:text-slate-300 mb-12 text-lg leading-relaxed font-light">I’m actively looking for opportunities in software engineering, AI product development, and full stack systems. Reach out for collaborative projects, internships, or mentorship conversations.</p>
 
@@ -23,7 +23,7 @@ export default function Contact() {
                   {icon}
                 </div>
                 <div>
-                  <p className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">{title}</p>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors font-display">{title}</h3>
                   <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1 line-clamp-1">{value}</p>
                 </div>
               </div>

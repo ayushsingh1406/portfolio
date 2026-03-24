@@ -108,7 +108,7 @@ export default function Skills() {
 
                 <div className="mb-8">
                     <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#993131] dark:text-cyan-400">Skills</p>
-                    <h2 className="mt-2 text-4xl md:text-5xl font-bold text-[#10304A] dark:text-white">Technologies & Tools I Use</h2>
+                    <h2 className="mt-2 text-4xl md:text-5xl font-bold text-[#10304A] dark:text-white font-display">Technologies & Tools I Use</h2>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -132,7 +132,7 @@ transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 dark:hover
 
                             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.12),transparent_60%)] dark:bg-[radial-gradient(circle_at_top_right,rgba(6,182,212,0.12),transparent_60%)]"></div>
 
-                            <h3 className="text-xl font-bold mb-6 text-slate-900 dark:text-white">
+                            <h3 className="text-xl font-bold mb-6 text-slate-900 dark:text-white font-display">
                                 {group.title}
                             </h3>
 

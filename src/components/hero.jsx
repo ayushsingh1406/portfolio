@@ -26,11 +26,11 @@ export default function Hero({ isDark }) {
 
           {/* TEXT */}
           <div className="flex-1 relative z-10 order-2 md:order-1 mt-6 md:mt-0">
-            <h1 className="text-6xl md:text-7xl font-black mb-6 tracking-tight text-slate-900 dark:text-white">
+            <h1 className="text-6xl md:text-7xl font-black mb-6 tracking-tight text-slate-900 dark:text-white font-display">
               Hi, I'm Ayush
             </h1>
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: isDark ? '#0d96ab' : '#d0c0a8' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-display" style={{ color: isDark ? '#0d96ab' : '#d0c0a8' }}>
               <ReactTyped
                 strings={[
                   "Full Stack Developer",

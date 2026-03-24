@@ -106,7 +106,7 @@ export default function CodingStats() {
 
                     <div className="mb-8">
                         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#993131] dark:text-cyan-400">Coding Stats</p>
-                        <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">My Coding Journey & Insights</h2>
+                        <h2 className="mt-2 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white font-display">My Coding Journey & Insights</h2>
                     </div>
                     <p className="text-sm text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
                         My development activity across GitHub repositories and competitive programming platforms.
@@ -149,7 +149,7 @@ export default function CodingStats() {
                                     GitHub
                                 </p>
 
-                                <h3 className="text-2xl font-bold">
+                                <h3 className="text-2xl font-bold font-display">
                                     Contribution Activity
                                 </h3>
 
@@ -289,7 +289,7 @@ export default function CodingStats() {
                                 LeetCode
                             </p>
 
-                            <h3 className="text-2xl font-bold">
+                            <h3 className="text-2xl font-bold font-display">
                                 Problem Solving Stats
                             </h3>
 
